@@ -1,12 +1,28 @@
 import React from 'react';
 import './NetTypes.css';
+import transparentImg from '../../assets/transparent-net.jpg';
+import whiteImg from '../../assets/white-net.jpg';
+import greenImg from '../../assets/green-net.jpg';
+import blackImg from '../../assets/black-net.jpg';
 
 const NetTypes = () => {
   const netTypes = [
-    { title: "Transparent / White Nets", desc: "Virtually invisible from a distance, maintaining your aesthetic view.", colorClass: "white-net" },
-    { title: "White Safety Nets", desc: "High-grade nylon material offering great durability and strength.", colorClass: "standard-white-net" },
-    { title: "Green Safety Nets", desc: "Heavy-duty green netting commonly used for sports, gardens, and construction.", colorClass: "green-net" },
-    { title: "Black Safety Nets", desc: "UV-stabilized black nets built to withstand harsh sunlight and heavy weather.", colorClass: "black-net" }
+    {
+      title: "Transparent Safety Nets",
+      image: transparentImg
+    },
+    {
+      title: "White Safety Nets",
+      image: whiteImg
+    },
+    {
+      title: "Green Safety Nets",
+      image: greenImg
+    },
+    {
+      title: "Black Safety Nets",
+      image: blackImg
+    }
   ];
 
   return (
@@ -15,12 +31,14 @@ const NetTypes = () => {
         <h2>Available <span className="highlight">Net Color Variants</span></h2>
         <p>Choose from our wide variety of premium material finishes.</p>
       </div>
+
       <div className="net-types-grid">
         {netTypes.map((item, index) => (
           <div className="net-type-card" key={index}>
-            <div className={`net-circle ${item.colorClass}`}></div>
+            <div className="net-circle-container">
+              <img src={item.image} alt={item.title} className="net-circle-img" />
+            </div>
             <h3>{item.title}</h3>
-            <p>{item.desc}</p>
           </div>
         ))}
       </div>
