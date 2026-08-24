@@ -1,0 +1,101 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo h2 {
+  color: var(--accent-color);
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--success-color);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.call-btn:hover {
+  background-color: var(--success-hover);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE MAGIC
+   ========================================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .phone-num {
+    display: none;
+  }
+
+  .call-btn {
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    padding: 20px 0;
+    box-shadow: var(--card-shadow);
+  }
+
+  .nav-links.active {
+    left: 0;
+   
+  }
+}

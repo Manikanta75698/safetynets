@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* LIGHT MODE VARIABLES */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --accent-color: #2e86de;
+  --accent-hover: #1e6bc2;
+  --border-color: #e5e7eb;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --success-color: #27ae60;
+  --success-hover: #219150;
+  --input-bg: #ffffff;
+}
+
+/* DARK MODE MAGIC */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --accent-color: #4facfe;
+    --accent-hover: #76c5ff;
+    --border-color: #374151;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --nav-bg: rgba(30, 30, 30, 0.85);
+    --success-color: #2ecc71;
+    --success-hover: #27ae60;
+    --input-bg: #2a2a2a;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.highlight {
+  color: var(--accent-color);
+}

@@ -1,0 +1,82 @@
+.process-section {
+  padding: 80px 10%;
+  background-color: var(--bg-secondary);
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.process-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.process-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.process-card {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.process-icon {
+  font-size: 40px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.process-number {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 4px solid var(--bg-secondary);
+}
+
+.process-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.process-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 50px 5%;
+  }
+}
