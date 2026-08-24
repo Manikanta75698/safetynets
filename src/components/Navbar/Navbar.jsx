@@ -1,36 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { MdOutlineShield } from 'react-icons/md';
 import './Navbar.css';
 
 const Navbar = () => {
-  // మెనూ ఓపెన్ ఉందా లేదా అని చెక్ చేయడానికి state
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="navbar">
-      <div className="nav-logo">
-        <h2>Anil Safety Nets</h2>
-      </div>
-
-      {/* isOpen true అయితే active క్లాస్ యాడ్ అవుతుంది */}
-      <ul className={isOpen ? "nav-links active" : "nav-links"}>
-        <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
-        <li><a href="#services" onClick={() => setIsOpen(false)}>Services</a></li>
-        <li><a href="#testimonials" onClick={() => setIsOpen(false)}>Reviews</a></li>
-        <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
-      </ul>
-
-      <div className="nav-contact">
-        <a href="tel:+919916162229" className="call-btn">
-          <FaPhoneAlt /> <span className="phone-num">+91 9916162229</span>
+    <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-container">
+        {/* Logo */}
+        <a href="#home" className="navbar-logo">
+          <div className="logo-icon-wrapper">
+            <MdOutlineShield />
+          </div>
+          <div className="logo-text">
+            <h2>OurSafetyNets</h2>
+            <p>Bengaluru</p>
+          </div>
         </a>
-      </div>
 
-      {/* మొబైల్ లో మెనూ ఐకాన్ (Hamburger / Close) */}
-      <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <FaTimes /> : <FaBars />}
+        {/* Desktop Nav Links */}
+        <nav className={`navbar-links ${isOpen ? 'active' : ''}`}>
+          <a href="#home" onClick={closeMenu}>Home</a>
+          <a href="#services" onClick={closeMenu}>Services</a>
+          <a href="#process" onClick={closeMenu}>Process</a>
+          <a href="#reviews" onClick={closeMenu}>Reviews</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+          
+          {/* Mobile Call Button inside drawer */}
+          <div className="mobile-drawer-footer">
+            <a href="tel:+918143267425" className="mobile-call-action" onClick={closeMenu}>
+              <FaPhoneAlt /> Call: +91 81432 67425
+            </a>
+          </div>
+        </nav>
+
+        {/* Desktop & Mobile Header Actions */}
+        <div className="navbar-actions">
+          <a href="tel:+918143267425" className="header-call-btn" aria-label="Call Us">
+            <FaPhoneAlt className="phone-icon-pulse" />
+            <span>+91 81432 67425</span>
+          </a>
+
+          {/* Hamburger Icon */}
+          <button 
+            className="hamburger-btn" 
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </div>
-    </nav>
+      {isOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
+    </header>
   );
 };
 

@@ -1,101 +1,244 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background-color: var(--nav-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+.navbar-header {
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-.nav-logo h2 {
-  color: var(--accent-color);
-  margin: 0;
-  font-size: 24px;
+.navbar-header.scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-primary);
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--accent-color);
-}
-
-.call-btn {
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 5%;
   display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: var(--success-color);
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  justify-content: space-between;
+}
+
+/* Logo Styling & Strict Left Alignment */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
 }
 
-.call-btn:hover {
-  background-color: var(--success-hover);
+.logo-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--accent-color), #0d6efd);
+  color: white;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+  flex-shrink: 0;
 }
 
-.menu-icon {
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.logo-text h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0;
+  text-align: left;
+}
+
+.logo-text p {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 2px 0 0 0;
+  text-align: left;
+}
+
+/* Desktop Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--accent-color);
+}
+
+.mobile-drawer-footer {
   display: none;
-  font-size: 24px;
+}
+
+/* Header Actions & Alignment */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1;
+}
+
+.header-call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.phone-icon-pulse {
+  animation: pulse-icon 1.5s infinite;
+}
+
+@keyframes pulse-icon {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hamburger Button Alignment */
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
   color: var(--text-primary);
   cursor: pointer;
+  padding: 6px;
+  z-index: 1002;
+  transition: transform 0.2s ease;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE MAGIC
-   ========================================= */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 15px 5%;
-  }
+.hamburger-btn:active {
+  transform: scale(0.9);
+}
 
-  .menu-icon {
-    display: block;
-  }
-
-  .phone-num {
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+  .header-call-btn span {
     display: none;
   }
 
-  .call-btn {
-    padding: 10px;
+  .header-call-btn {
+    padding: 8px 10px;
     border-radius: 50%;
+    width: 38px;
+    height: 38px;
   }
 
+  .navbar-container {
+    padding: 10px 4%;
+  }
 
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: -100%;
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 260px;
+    height: 100vh;
+    background-color: var(--bg-primary);
     flex-direction: column;
-    background-color: var(--bg-secondary);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s ease-in-out;
-    padding: 20px 0;
-    box-shadow: var(--card-shadow);
+    align-items: flex-start;
+    padding: 80px 20px 30px 20px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1001;
+    gap: 16px;
   }
 
-  .nav-links.active {
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .navbar-links a {
+    font-size: 1.05rem;
+    font-weight: 600;
+    width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mobile-drawer-footer {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .mobile-call-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #25d366, #1ebe5d);
+    color: white;
+    width: 100%;
+    padding: 10px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
     left: 0;
-   
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
   }
 }
