@@ -3,10 +3,12 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
+import NetTypes from './components/NetTypes/NetTypes';
 import Process from './components/Process/Process';
 import Testimonials from './components/Testimonials/Testimonials';
 import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
+import CTA from './components/CTA/CTA'; // <-- Import CTA
 import Footer from './components/Footer/Footer';
 import WhatsApp from './components/WhatsApp/WhatsApp';
 
@@ -22,10 +24,12 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <NetTypes />
       <Process />
       <Testimonials />
       <FAQ />
       <Contact />
+      <CTA />        {/* <-- Add CTA section here */}
       <Footer />
       <WhatsApp />
     </>

@@ -1,9 +1,11 @@
 import React from 'react';
 import './Services.css';
-import { FaHome, FaBuilding, FaFutbol, FaChild, FaTools, FaCheckCircle } from 'react-icons/fa';
+import {
+  FaHome, FaBuilding, FaFutbol, FaChild, FaTools,
+  FaCheckCircle, FaCar, FaSwimmingPool, FaShieldAlt, FaFeather
+} from 'react-icons/fa';
 
 const Services = () => {
-  // Array of services so that code remains clean
   const serviceData = [
     {
       id: 1,
@@ -25,8 +27,8 @@ const Services = () => {
     },
     {
       id: 4,
-      title: "Sports & Cricket Nets",
-      description: "Heavy-duty nets for cricket practice, football grounds, and sports arenas. Built to withstand high-impact usage.",
+      title: "Cricket Practice Net",
+      description: "Professional Cricket Practice Nets designed for schools, academies, playgrounds, and training areas, ensuring safe practice sessions.",
       icon: <FaFutbol className="service-icon" />
     },
     {
@@ -37,17 +39,53 @@ const Services = () => {
     },
     {
       id: 6,
-      title: "Construction & Industrial Nets",
-      description: "Prevent debris falls and ensure worker safety with our industrial-grade safety nets. Perfect for all building sites.",
+      title: "Building & Construction Nets",
+      description: "Prevent debris falls and ensure worker safety with our industrial-grade safety nets. Perfect for all building construction sites.",
       icon: <FaTools className="service-icon" />
+    },
+    {
+      id: 7,
+      title: "Duct Area Safety Nets",
+      description: "Installs premium Duct Area Safety Net to prevent accidents, bird entry, and object falls while maintaining ventilation.",
+      icon: <FaShieldAlt className="service-icon" />
+    },
+    {
+      id: 8,
+      title: "Monkey Safety Net",
+      description: "Provides strong Monkey Safety Net to prevent monkey entry into homes, apartments, and commercial spaces.",
+      icon: <FaShieldAlt className="service-icon" />
+    },
+    {
+      id: 9,
+      title: "Bird Spikes",
+      description: "High-quality Bird Spikes solutions to prevent pigeons and birds from sitting on balconies, windows, ledges, and rooftops.",
+      icon: <FaFeather className="service-icon" />
+    },
+    {
+      id: 10,
+      title: "Car Parking Safety Net",
+      description: "Designed to protect parking areas from birds, falling debris, dust, and external disturbances while ensuring vehicle safety.",
+      icon: <FaCar className="service-icon" />
+    },
+    {
+      id: 11,
+      title: "Swimming Pool Safety Net",
+      description: "Strong and reliable Pool Safety Covers designed to protect children, pets, and pools from accidental falls and debris.",
+      icon: <FaSwimmingPool className="service-icon" />
+    },
+    {
+      id: 12,
+      title: "Terrace Top Safety Net",
+      description: "Offers durable Terrace Top Safety Net for homes and commercial buildings, providing protection against falls and bird disturbances.",
+      icon: <FaHome className="service-icon" />
     }
   ];
 
   return (
     <section className="services-section" id="services">
       <div className="services-header">
-        <h2>Our Premium <span className="highlight">Services</span></h2>
-        <p>Expert bird netting and safety solutions tailored for Bengaluru homes and businesses.</p>
+        <h2>All Types of <span className="highlight">Safety Nets & Services</span></h2>
+        <p>Comprehensive bird netting and safety solutions tailored for homes and businesses in Bengaluru.</p>
       </div>
 
       <div className="services-grid">

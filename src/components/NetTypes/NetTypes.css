@@ -1,0 +1,79 @@
+.net-types-section {
+  padding: 80px 10%;
+  background-color: var(--bg-secondary);
+}
+
+.net-types-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.net-types-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.net-types-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.net-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.net-type-card {
+  text-align: center;
+  background-color: var(--bg-primary);
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.net-type-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.net-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  border: 4px solid var(--border-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.white-net {
+  background: radial-gradient(circle, #ffffff 60%, #e0e0e0 100%);
+}
+
+.standard-white-net {
+  background: #fdfdfd;
+  border-color: #cbd5e1;
+}
+
+.green-net {
+  background: radial-gradient(circle, #2ecc71 40%, #27ae60 100%);
+}
+
+.black-net {
+  background: radial-gradient(circle, #374151 40%, #111827 100%);
+}
+
+.net-type-card h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.net-type-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
