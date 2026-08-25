@@ -2,15 +2,20 @@ import React from 'react';
 import './Services.css';
 import { FaCheckCircle, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
-// Import only existing images from assets folder
-import net1 from '../../assets/net1.jpg';
-import net2 from '../../assets/net2.jpg';
-import hero2 from '../../assets/hero2.jpeg';
-import hero4 from '../../assets/hero4.jpg';
-import net6 from '../../assets/net6.jpeg';
-import net4 from '../../assets/net4.jpg';
-import hero3 from '../../assets/hero3.jpeg';
-import net8 from '../../assets/net8.jpeg';
+// Import all real installation images cleanly from assets (Flow: net1, net2... net8)
+import net1 from '../../assets/net1.jpg'; // ID: 1
+import net2 from '../../assets/net2.jpg'; // ID: 2
+import hero2 from '../../assets/hero2.jpeg'; // ID: 3 (Spikes)
+import hero4 from '../../assets/hero4.jpeg'; // ID: 4 (Car Park)
+import net6 from '../../assets/net6.jpeg'; // ID: 5 (Inv. Grill)
+import net4 from '../../assets/net4.jpg'; // ID: 6 (Cricket)
+import hero3 from '../../assets/hero3.jpeg'; // ID: 7 (Const)
+import net8 from '../../assets/net8.jpeg'; // ID: 8 (Monkey)
+import net9 from '../../assets/net9.jpg'; // ID: 9 (Duct)
+import net10 from '../../assets/net10.jpeg'; // ID: 10 (House)
+import net11 from '../../assets/net11.jpeg'; // ID: 11 (Stairs)
+import net12 from '../../assets/net12.jpeg'; // ID: 12 (Window Grill)
+import net13 from '../../assets/net13.jpg'; // ID: 13 (Mosquito)
 
 const servicesData = [
   {
@@ -51,7 +56,7 @@ const servicesData = [
   {
     id: 6,
     title: "Cricket Practice Nets",
-    image: net4, // Using hero4 since net7 was deleted
+    image: net4,
     description: "Professional Cricket Practice Nets designed for terrace boxes, schools, academies, and residential turf areas with high impact absorption.",
     features: ["High Impact Resistance", "UV Stabilized", "Customized Box Setup"]
   },
@@ -68,6 +73,41 @@ const servicesData = [
     image: net8,
     description: "Heavy-duty wire-mesh reinforced safety nets designed to prevent monkey nuisance and stray animal intrusion into balconies and utility areas.",
     features: ["Extra Tough Wire Mesh", "Secure Lock Bounds", "Complete Peace of Mind"]
+  },
+  {
+    id: 9,
+    title: "Duct Area Safety Nets",
+    image: net9, // Using net10 for Duct, change if needed
+    description: "Secure open ventilation shafts and duct areas in apartment buildings. Prevents pigeon intrusion, debris buildup, and accidental falls.",
+    features: ["Total Pigeon Blockage", "Ventilation Friendly", "Heavy-Duty HDPE Net"]
+  },
+  {
+    id: 10,
+    title: "House Covering Safety Nets",
+    image: net10, // Using hero3 for House, change if needed
+    description: "Complete exterior safety netting solutions for independent houses and villas to protect against monkeys, stray animals, and falling debris.",
+    features: ["Full Villa Protection", "Weatherproof Build", "Secure Anchorage"]
+  },
+  {
+    id: 11,
+    title: "Stairs Safety Nets",
+    image: net11, // Using net11 for Stairs
+    description: "Protective safety barriers installed along open staircase railings to prevent toddlers and pets from slipping through vertical gaps.",
+    features: ["Toddler Fall Prevention", "Tight Mesh Spacing", "Neat & Secure Fit"]
+  },
+  {
+    id: 12,
+    title: "Invisible Grill For Windows",
+    image: net12, // Using net12 for Window Grill
+    description: "Sleek and robust SS 316 invisible grills tailored specifically for windows to ensure uncompromising security and unobstructed airflow.",
+    features: ["Rust-Proof SS Cables", "Elegant Window Look", "Zero Maintenance"]
+  },
+  {
+    id: 13,
+    title: "Mosquito Safety Nets",
+    image: net13, // Using net13 for Mosquito
+    description: "High-density fine mesh screen nets designed to keep mosquitoes, flies, and unwanted insects out while allowing fresh air circulation.",
+    features: ["Fine Anti-Insect Mesh", "Easy to Clean", "Fresh Air Flow"]
   }
 ];
 

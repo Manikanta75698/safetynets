@@ -1,17 +1,17 @@
 import React from 'react';
 import './Footer.css';
-import { FaShieldAlt, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaShieldAlt, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   const phoneNumber = "8143267425";
-  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need more info about safety nets installation.")}`;
+  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need information about safety net installation in Bangalore.")}`;
 
   return (
     <footer className="footer-section" id="contact">
       <div className="footer-container">
 
         {/* Column 1: Brand Info */}
-        <div className="footer-col">
+        <div className="footer-col brand-col">
           <div className="footer-logo">
             <div className="logo-icon-wrapper">
               <FaShieldAlt />
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="footer-about">
-            Bengaluru’s most trusted safety partner. We deliver high-tensile balcony safety nets, pigeon anti-bird netting, and premium invisible grills with expert installation.
+            Bengaluru’s most trusted safety partner. We provide professional, high-tensile safety nets, anti-bird pigeon netting, and premium invisible grills with 5 to 10 years warranty.
           </p>
           <div className="footer-contact-info">
             <p><FaMapMarkerAlt className="f-icon" /> Serving All Over Bengaluru</p>
@@ -37,13 +37,13 @@ const Footer = () => {
           <ul className="footer-links-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Our Services</a></li>
-            <li><a href="#process">Installation Process</a></li>
-            <li><a href="#reviews">Customer Reviews</a></li>
-            <li><a href="#contact">Get Free Quote</a></li>
+            <li><a href="#gallery">Installation Gallery</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
 
-        {/* Column 3: Safety Solutions */}
+        {/* Column 3: Services */}
         <div className="footer-col">
           <h4>Safety Solutions</h4>
           <ul className="footer-links-list">
@@ -51,31 +51,52 @@ const Footer = () => {
             <li><a href="#services">Balcony Safety Nets</a></li>
             <li><a href="#services">Stainless Steel Invisible Grills</a></li>
             <li><a href="#services">Cricket Practice Nets</a></li>
-            <li><a href="#services">Car Parking & Shed Nets</a></li>
+            <li><a href="#services">Construction Safety Nets</a></li>
+            <li><a href="#services">Monkey & Animal Nets</a></li>
           </ul>
         </div>
 
-        {/* Column 4: SEO Service Areas in Bengaluru */}
-        <div className="footer-col">
-          <h4>Service Areas in Bengaluru</h4>
-          <p className="seo-areas-text">
-            Free doorstep inspection and same-day installation across major Bengaluru locations:
-          </p>
-          <div className="seo-tags">
-            <span>Whitefield</span>
-            <span>Electronic City</span>
-            <span>HSR Layout</span>
-            <span>Koramangala</span>
-            <span>Indiranagar</span>
-            <span>Marathahalli</span>
-            <span>Bellandur</span>
-            <span>Hebbal</span>
-            <span>Jayanagar</span>
-            <span>JP Nagar</span>
-            <span>Banashankari</span>
-            <span>Yelahanka</span>
-            <span>Sarjapur Road</span>
-            <span>BTM Layout</span>
+        {/* Column 4: SEO Service Areas (Replaced with Keywords Directory) */}
+        <div className="footer-col seo-directory-col">
+          <h4>Popular Services in Bengaluru</h4>
+          <div className="seo-directory-grid">
+            <div className="seo-cat">
+              <h5>Invisible Grills</h5>
+              <ul>
+                <li><a href="#services">For Balcony Bangalore</a></li>
+                <li><a href="#services">For Windows Bangalore</a></li>
+                <li><a href="#services">Installation Bangalore</a></li>
+                <li><a href="#services">For Kids/Pets Safety</a></li>
+              </ul>
+            </div>
+            <div className="seo-cat">
+              <h5>Sports Nets</h5>
+              <ul>
+                <li><a href="#services">Cricket Practice</a></li>
+                <li><a href="#services">Sports Practice Nets</a></li>
+                <li><a href="#services">Terrace Cricket Nets</a></li>
+              </ul>
+            </div>
+            <div className="seo-cat">
+              <h5>Safety Nets</h5>
+              <ul>
+                <li><a href="#services">Balcony Safety Nets</a></li>
+                <li><a href="#services">Building Safety</a></li>
+                <li><a href="#services">Car Parking Nets</a></li>
+                <li><a href="#services">Construction Nets</a></li>
+                <li><a href="#services">Monkey Safety</a></li>
+              </ul>
+            </div>
+            <div className="seo-cat">
+              <h5>Bird Nets</h5>
+              <ul>
+                <li><a href="#services">Anti Bird Nets</a></li>
+                <li><a href="#services">Bird Spikes</a></li>
+                <li><a href="#services">Nets Fixing Near Me</a></li>
+                <li><a href="#services">Balcony Pigeon Netting</a></li>
+                <li><a href="#services">Installation Charges</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 

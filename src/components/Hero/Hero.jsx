@@ -5,7 +5,7 @@ import { FaShieldAlt, FaStar, FaChevronLeft, FaChevronRight, FaCheckCircle } fro
 import slide1 from '../../assets/hero1.jpeg';
 import slide2 from '../../assets/hero2.jpeg';
 import slide3 from '../../assets/hero3.jpeg';
-import slide4 from '../../assets/hero4.jpg';
+import slide4 from '../../assets/hero4.jpeg';
 
 const heroSlides = [
   {

@@ -5,7 +5,8 @@ import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import NetTypes from './components/NetTypes/NetTypes';
 import Process from './components/Process/Process';
-import Gallery from './components/Gallery/Gallery';
+// 1. Gallery ni remove chesi, ikkada SportsGallery import chey:
+import SportsGallery from './components/SportsGallery/SportsGallery';
 import Testimonials from './components/Testimonials/Testimonials';
 import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
@@ -28,7 +29,10 @@ function App() {
       <Services />
       <NetTypes />
       <Process />
-      <Gallery />
+
+      {/* 2. Ikkada old <Gallery /> badhulu kotha slider vasthundi */}
+      <SportsGallery />
+
       <Testimonials />
       <FAQ />
       <Contact />
