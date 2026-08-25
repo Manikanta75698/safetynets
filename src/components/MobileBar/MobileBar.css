@@ -1,0 +1,41 @@
+.mobile-sticky-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-secondary, #ffffff);
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    padding: 10px 16px;
+    gap: 12px;
+    z-index: 9999;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .mob-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+  }
+
+  .mob-call {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+  }
+
+  .mob-whatsapp {
+    background: linear-gradient(135deg, #25d366, #16a34a);
+  }
+}

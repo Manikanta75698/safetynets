@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact';
 import CTA from './components/CTA/CTA';
 import Footer from './components/Footer/Footer';
 import WhatsApp from './components/WhatsApp/WhatsApp';
+import MobileBar from './components/MobileBar/MobileBar';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <CTA />
       <Footer />
       <WhatsApp />
+      <MobileBar />
     </>
   );
 }
