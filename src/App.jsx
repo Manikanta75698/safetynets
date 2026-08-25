@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import NetTypes from './components/NetTypes/NetTypes';
 import Process from './components/Process/Process';
+import Gallery from './components/Gallery/Gallery';
 import Testimonials from './components/Testimonials/Testimonials';
 import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
@@ -26,6 +27,7 @@ function App() {
       <Services />
       <NetTypes />
       <Process />
+      <Gallery />
       <Testimonials />
       <FAQ />
       <Contact />

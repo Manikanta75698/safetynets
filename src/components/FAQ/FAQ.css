@@ -1,22 +1,35 @@
 .faq-section {
-  padding: 80px 10%;
-  background-color: var(--bg-primary);
+  padding: 80px 5%;
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 .faq-header {
   text-align: center;
-  margin-bottom: 50px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.faq-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  display: block;
 }
 
 .faq-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .faq-header p {
+  font-size: 1rem;
   color: var(--text-secondary);
-  font-size: 1.1rem;
 }
 
 .faq-container {
@@ -28,13 +41,12 @@
 }
 
 .faq-item {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 20px 25px;
+  border-radius: 12px;
+  padding: 20px 24px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: var(--card-shadow);
 }
 
 .faq-item:hover {
@@ -43,35 +55,46 @@
 
 .faq-question {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .faq-question h3 {
-  font-size: 1.1rem;
-  color: var(--text-primary);
+  font-size: 1.05rem;
   font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
 }
 
 .faq-icon {
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
   color: var(--accent-color);
-  font-size: 1rem;
 }
 
 .faq-answer {
-  margin-top: 15px;
-  padding-top: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  margin-top: 12px;
   border-top: 1px solid var(--border-color);
+  padding-top: 12px;
 }
 
 .faq-answer p {
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  font-size: 0.95rem;
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .faq-section {
-    padding: 50px 5%;
-  }
+  margin: 0;
 }
