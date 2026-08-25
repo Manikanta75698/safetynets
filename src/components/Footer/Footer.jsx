@@ -37,7 +37,7 @@ const Footer = () => {
           <ul className="footer-links-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Our Services</a></li>
-            <li><a href="#gallery">Installation Gallery</a></li>
+            <li><a href="#sports-gallery">Sports Nets Gallery</a></li>
             <li><a href="#faq">FAQs</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
@@ -56,24 +56,44 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 4: SEO Service Areas (Replaced with Keywords Directory) */}
-        <div className="footer-col seo-directory-col">
-          <h4>Popular Services in Bengaluru</h4>
+        {/* Column 4: Bengaluru Service Areas */}
+        <div className="footer-col">
+          <h4>Service Areas in Bengaluru</h4>
+          <ul className="footer-links-list areas-list">
+            <li><a href="#contact">Whitefield</a></li>
+            <li><a href="#contact">Electronic City</a></li>
+            <li><a href="#contact">HSR Layout</a></li>
+            <li><a href="#contact">Koramangala</a></li>
+            <li><a href="#contact">Indiranagar</a></li>
+            <li><a href="#contact">Jayanagar</a></li>
+            <li><a href="#contact">JP Nagar</a></li>
+            <li><a href="#contact">Marathahalli</a></li>
+            <li><a href="#contact">Bellandur</a></li>
+            <li><a href="#contact">Hebbal & Yelahanka</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* SEO Keywords Full-Width Directory Strip */}
+      <div className="footer-seo-directory">
+        <div className="seo-directory-container">
+          <h4>Explore Popular Safety Solutions & Keywords</h4>
           <div className="seo-directory-grid">
             <div className="seo-cat">
               <h5>Invisible Grills</h5>
               <ul>
-                <li><a href="#services">For Balcony Bangalore</a></li>
-                <li><a href="#services">For Windows Bangalore</a></li>
-                <li><a href="#services">Installation Bangalore</a></li>
-                <li><a href="#services">For Kids/Pets Safety</a></li>
+                <li><a href="#services">For Balcony in Bangalore</a></li>
+                <li><a href="#services">For Windows in Bangalore</a></li>
+                <li><a href="#services">Installation in Bangalore</a></li>
+                <li><a href="#services">For Kids & Pet Safety</a></li>
               </ul>
             </div>
             <div className="seo-cat">
               <h5>Sports Nets</h5>
               <ul>
-                <li><a href="#services">Cricket Practice</a></li>
-                <li><a href="#services">Sports Practice Nets</a></li>
+                <li><a href="#services">Cricket Practice Nets</a></li>
+                <li><a href="#services">All Types of Sports Nets</a></li>
                 <li><a href="#services">Terrace Cricket Nets</a></li>
               </ul>
             </div>
@@ -81,25 +101,22 @@ const Footer = () => {
               <h5>Safety Nets</h5>
               <ul>
                 <li><a href="#services">Balcony Safety Nets</a></li>
-                <li><a href="#services">Building Safety</a></li>
+                <li><a href="#services">Building & Construction</a></li>
                 <li><a href="#services">Car Parking Nets</a></li>
-                <li><a href="#services">Construction Nets</a></li>
-                <li><a href="#services">Monkey Safety</a></li>
+                <li><a href="#services">Monkey Safety Nets</a></li>
               </ul>
             </div>
             <div className="seo-cat">
-              <h5>Bird Nets</h5>
+              <h5>Bird & Pigeon Nets</h5>
               <ul>
                 <li><a href="#services">Anti Bird Nets</a></li>
-                <li><a href="#services">Bird Spikes</a></li>
+                <li><a href="#services">Bird Control Spikes</a></li>
                 <li><a href="#services">Nets Fixing Near Me</a></li>
-                <li><a href="#services">Balcony Pigeon Netting</a></li>
-                <li><a href="#services">Installation Charges</a></li>
+                <li><a href="#services">Pigeon Netting Price</a></li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="footer-bottom">

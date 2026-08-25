@@ -13,9 +13,10 @@ import hero3 from '../../assets/hero3.jpeg'; // ID: 7 (Const)
 import net8 from '../../assets/net8.jpeg'; // ID: 8 (Monkey)
 import net9 from '../../assets/net9.jpg'; // ID: 9 (Duct)
 import net10 from '../../assets/net10.jpeg'; // ID: 10 (House)
-import net11 from '../../assets/net11.jpeg'; // ID: 11 (Stairs)
+import net11 from '../../assets/net11.jpg'; // ID: 11 (Stairs)
 import net12 from '../../assets/net12.jpeg'; // ID: 12 (Window Grill)
 import net13 from '../../assets/net13.jpg'; // ID: 13 (Mosquito)
+import net14 from '../../assets/net14.jpeg'; // ID: 13 (Child)
 
 const servicesData = [
   {
@@ -90,7 +91,7 @@ const servicesData = [
   },
   {
     id: 11,
-    title: "Stairs Safety Nets",
+    title: "Stairs Safety  ",
     image: net11, // Using net11 for Stairs
     description: "Protective safety barriers installed along open staircase railings to prevent toddlers and pets from slipping through vertical gaps.",
     features: ["Toddler Fall Prevention", "Tight Mesh Spacing", "Neat & Secure Fit"]
@@ -107,6 +108,13 @@ const servicesData = [
     title: "Mosquito Safety Nets",
     image: net13, // Using net13 for Mosquito
     description: "High-density fine mesh screen nets designed to keep mosquitoes, flies, and unwanted insects out while allowing fresh air circulation.",
+    features: ["Fine Anti-Insect Mesh", "Easy to Clean", "Fresh Air Flow"]
+  },
+   {
+    id: 14,
+    title: "Child Safety Nets",
+    image: net14, // Using net14 child safety
+    description: "Heavy-duty wire-mesh reinforced safety nets designed to Child safety",
     features: ["Fine Anti-Insect Mesh", "Easy to Clean", "Fresh Air Flow"]
   }
 ];
