@@ -15,8 +15,20 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
+
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setIsOpen(false); // Automatically close mobile drawer when switching to desktop view
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const closeMenu = () => setIsOpen(false);
@@ -25,7 +37,7 @@ const Navbar = () => {
     <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         {/* Logo */}
-        <a href="#home" className="navbar-logo">
+        <a href="#home" className="navbar-logo" onClick={closeMenu}>
           <div className="logo-icon-wrapper">
             <MdOutlineShield />
           </div>
@@ -35,14 +47,14 @@ const Navbar = () => {
           </div>
         </a>
 
-        {/* Desktop Nav Links */}
+        {/* Desktop Nav Links / Mobile Drawer */}
         <nav className={`navbar-links ${isOpen ? 'active' : ''}`}>
           <a href="#home" onClick={closeMenu}>Home</a>
           <a href="#services" onClick={closeMenu}>Services</a>
           <a href="#process" onClick={closeMenu}>Process</a>
           <a href="#reviews" onClick={closeMenu}>Reviews</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
-          
+
           {/* Mobile Call Button inside drawer */}
           <div className="mobile-drawer-footer">
             <a href="tel:+918143267425" className="mobile-call-action" onClick={closeMenu}>
@@ -51,7 +63,7 @@ const Navbar = () => {
           </div>
         </nav>
 
-        {/* Desktop & Mobile Header Actions */}
+        {/* Header Actions */}
         <div className="navbar-actions">
           <a href="tel:+918143267425" className="header-call-btn" aria-label="Call Us">
             <FaPhoneAlt className="phone-icon-pulse" />
@@ -59,8 +71,8 @@ const Navbar = () => {
           </a>
 
           {/* Hamburger Icon */}
-          <button 
-            className="hamburger-btn" 
+          <button
+            className="hamburger-btn"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle navigation menu"
           >

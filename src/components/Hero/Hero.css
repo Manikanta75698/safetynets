@@ -1,7 +1,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 90vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,6 @@
   background-color: #0b132b;
 }
 
-/* Background Slider Container */
 .hero-slider-bg {
   position: absolute;
   top: 0;
@@ -19,44 +18,40 @@
   z-index: 1;
 }
 
-/* Smooth Cross-Fade & Ken Burns Zoom Animation */
+/* Full image display fix: using 'contain' so the complete image is fully visible without any cropping */
 .hero-slide-item {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   opacity: 0;
-  transform: scale(1.08);
-  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 6s cubic-bezier(0.1, 0, 0.2, 1);
-  will-change: transform, opacity;
+  transition: opacity 0.8s ease-in-out;
+  will-change: opacity;
 }
 
 .hero-slide-item.active {
   opacity: 1;
-  transform: scale(1);
 }
 
-/* Gradient Vignette Overlay for Crisp Readability */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(11, 19, 43, 0.65) 0%, rgba(11, 19, 43, 0.92) 100%),
-    linear-gradient(to bottom, rgba(11, 19, 43, 0.3) 0%, rgba(11, 19, 43, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(11, 19, 43, 0.2) 0%, rgba(11, 19, 43, 0.75) 100%);
 }
 
-/* Hero Content Container */
 .hero-container {
   position: relative;
   z-index: 2;
   max-width: 1000px;
   width: 100%;
-  padding: 80px 5%;
+  padding: 60px 5%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -64,18 +59,20 @@
   text-align: center;
 }
 
-/* Keyframe Animated Content on Slide Change */
+/* Removed heavy glass box card — text floats directly with subtle shadow for a clean look */
 .hero-content-animated {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: heroTextFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroTextFadeUp 0.7s ease-in-out forwards;
+  max-width: 850px;
+  width: 100%;
 }
 
 @keyframes heroTextFadeUp {
   0% {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(15px);
   }
 
   100% {
@@ -84,22 +81,21 @@
   }
 }
 
-/* Trust Badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 6px 18px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.88rem;
   font-weight: 600;
   color: #f8fafc;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .star-icon {
@@ -114,32 +110,28 @@
   color: #38bdf8;
 }
 
-/* Main Heading */
 .hero-title {
-  font-size: clamp(2.1rem, 4.5vw, 3.8rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   font-weight: 800;
   color: #ffffff;
   line-height: 1.18;
-  letter-spacing: -0.02em;
   margin-bottom: 16px;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Description */
 .hero-description {
   font-size: clamp(1rem, 1.4vw, 1.2rem);
-  color: #cbd5e1;
-  max-width: 720px;
-  line-height: 1.65;
-  margin-bottom: 30px;
-  font-weight: 400;
+  color: #e2e8f0;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Action Buttons */
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -147,41 +139,37 @@
 .btn-primary {
   background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
   color: #ffffff;
-  padding: 14px 32px;
+  padding: 13px 30px;
   border-radius: 50px;
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
-  letter-spacing: 0.3px;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
   color: #ffffff;
-  padding: 14px 32px;
+  padding: 13px 30px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-3px);
+  background: rgba(0, 0, 0, 0.55);
 }
 
-/* Trust Highlights Row */
 .hero-trust-row {
   display: flex;
   align-items: center;
@@ -189,7 +177,7 @@
   gap: 25px;
   flex-wrap: wrap;
   padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .trust-item {
@@ -197,8 +185,9 @@
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  color: #e2e8f0;
+  color: #f1f5f9;
   font-weight: 500;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .trust-icon {
@@ -206,14 +195,13 @@
   font-size: 1rem;
 }
 
-/* Arrow Navigation Buttons */
 .slider-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
   color: white;
   width: 44px;
   height: 44px;
@@ -223,13 +211,12 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.1rem;
   z-index: 3;
 }
 
 .slider-arrow:hover {
-  background: rgba(255, 255, 255, 0.28);
-  transform: translateY(-50%) scale(1.1);
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.08);
 }
 
 .slider-arrow.prev {
@@ -240,11 +227,10 @@
   right: 20px;
 }
 
-/* Indicator Dots */
 .hero-dots {
   display: flex;
   gap: 10px;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .dot {
@@ -252,21 +238,18 @@
   height: 12px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  padding: 0;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .dot.active {
-  width: 34px;
-  border-radius: 20px;
+  width: 32px;
+  border-radius: 10px;
   background: #38bdf8;
 }
 
-/* Responsive Styles */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .slider-arrow {
     display: none;
   }
@@ -274,32 +257,56 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 82vh;
+    min-height: auto;
+    padding: 20px 4% 25px 4%;
+  }
+
+  /* Mobile lo image completely fill avvadaniki cover use chestham */
+  .hero-slide-item {
+    background-size: cover;
+    background-position: center center;
   }
 
   .hero-container {
-    padding: 60px 4% 40px 4%;
+    padding: 10px 0;
+  }
+
+  .hero-badge,
+  .hero-trust-row,
+  .slider-arrow {
+    display: none;
+    /* Hide extra elements on mobile for a clean look */
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
   }
 
   .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    max-width: 320px;
+    margin-bottom: 15px;
+    gap: 8px;
   }
 
-  .btn-primary,
+  .btn-primary {
+    width: 100%;
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+
   .btn-secondary {
-    width: 100%;
-  }
-
-  .hero-trust-row {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .hero-badge .badge-divider,
-  .hero-badge .badge-category {
     display: none;
+    /* Keep only primary button on mobile to save space */
+  }
+
+  .hero-dots {
+    margin-top: 10px;
   }
 }

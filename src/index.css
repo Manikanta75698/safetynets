@@ -42,6 +42,13 @@
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  /* Permanently prevents horizontal side-scrolling / white space bug */
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);

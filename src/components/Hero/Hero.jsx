@@ -2,38 +2,41 @@ import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import { FaShieldAlt, FaStar, FaChevronLeft, FaChevronRight, FaCheckCircle } from 'react-icons/fa';
 
-// High-resolution architectural & balcony images tailored for safety nets
+import slide1 from '../../assets/hero1.jpeg';
+import slide2 from '../../assets/hero2.jpeg';
+import slide3 from '../../assets/hero3.jpeg';
+import slide4 from '../../assets/hero4.jpg';
+
 const heroSlides = [
   {
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=85",
-    badge: "Bengaluru's Most Trusted Safety Partner",
-    title: "100% Secure Safety Nets & Invisible Grills",
-    description: "Expert installation by certified professionals. Keep your kids and pets safe with high-tensile, weather-resistant nylon nets."
+    image: slide1,
+    badge: "Sports & Training Netting Solutions",
+    title: "Professional Cricket Practice Nets",
+    description: "Heavy-duty UV-stabilized cricket nets designed for terrace boxes, schools, academies, and residential turf areas."
   },
   {
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85",
-    badge: "Clean & Hygiene Balcony Solutions",
-    title: "Pigeon & Anti-Bird Protection Netting",
-    description: "Protect your balconies, windows, and ducts from pigeon mess and health hazards without blocking fresh air and sunlight."
+    image: slide2,
+    badge: "Effective Anti-Bird & Pigeon Control",
+    title: "Balcony & Window Bird Spikes",
+    description: "High-grade polycarbonate and stainless steel bird spikes to prevent pigeons from sitting on railings, ledges, and window sills."
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85",
-    badge: "Modern Aesthetics Meets Maximum Security",
-    title: "Premium SS 316 Invisible Grills",
-    description: "Get unobstructed panoramic city views combined with unbreakable 400kg+ tensile strength safety."
+    image: slide3,
+    badge: "Industrial & Site Safety",
+    title: "Construction Building Safety Nets",
+    description: "Robust debris safety nets engineered for under-construction high-rise buildings to protect workers and passersby."
   },
   {
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1920&q=85",
-    badge: "Sports & Industrial Netting",
-    title: "Custom Cricket Practice & Sports Nets",
-    description: "Heavy-duty UV-stabilized sports nets designed for terrace cricket boxes, schools, academies, and residential societies."
+    image: slide4,
+    badge: "Vehicle Protection Systems",
+    title: "Car Parking Safety & Roof Shed Nets",
+    description: "Durable shading and protective net sheds designed for car parking areas to safeguard vehicles from sun heat, debris, and bird droppings."
   }
 ];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-slide every 5.5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
@@ -51,7 +54,6 @@ const Hero = () => {
 
   return (
     <section className="hero-section" id="home">
-      {/* Dynamic Background Image Carousel */}
       <div className="hero-slider-bg">
         {heroSlides.map((slide, index) => (
           <div
@@ -64,10 +66,8 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Hero Foreground Content with Key-based Re-animation */}
       <div className="hero-container">
         <div key={currentSlide} className="hero-content-animated">
-          {/* Rating / Category Badge */}
           <div className="hero-badge">
             <FaStar className="star-icon" />
             <span>4.9/5 (5000+ Customers)</span>
@@ -75,17 +75,14 @@ const Hero = () => {
             <span className="badge-category">{heroSlides[currentSlide].badge}</span>
           </div>
 
-          {/* Main Title */}
           <h1 className="hero-title">
             {heroSlides[currentSlide].title}
           </h1>
 
-          {/* Description */}
           <p className="hero-description">
             {heroSlides[currentSlide].description}
           </p>
 
-          {/* CTAs */}
           <div className="hero-buttons">
             <a href="#contact" className="btn-primary">
               Get a Free Quote
@@ -95,7 +92,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Trust Highlights */}
           <div className="hero-trust-row">
             <div className="trust-item">
               <FaCheckCircle className="trust-icon" />
@@ -112,7 +108,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Carousel Navigation Controls */}
         <button className="slider-arrow prev" onClick={handlePrev} aria-label="Previous Slide">
           <FaChevronLeft />
         </button>
@@ -120,7 +115,6 @@ const Hero = () => {
           <FaChevronRight />
         </button>
 
-        {/* Slide Indicators */}
         <div className="hero-dots">
           {heroSlides.map((_, index) => (
             <button

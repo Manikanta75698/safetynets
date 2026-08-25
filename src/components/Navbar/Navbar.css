@@ -4,8 +4,8 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--bg-primary);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
   transition: all 0.3s ease;
 }
 
@@ -24,7 +24,7 @@
   justify-content: space-between;
 }
 
-/* Logo Styling & Strict Left Alignment */
+/* Logo Styling */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, var(--accent-color), #0d6efd);
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
   color: white;
   border-radius: 10px;
   font-size: 1.3rem;
@@ -57,20 +57,18 @@
 .logo-text h2 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #0f172a;
   line-height: 1.1;
   margin: 0;
-  text-align: left;
 }
 
 .logo-text p {
   font-size: 0.68rem;
-  color: var(--text-secondary);
+  color: #64748b;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   font-weight: 600;
   margin: 2px 0 0 0;
-  text-align: left;
 }
 
 /* Desktop Links */
@@ -82,21 +80,22 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: #64748b;
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .navbar-links a:hover {
-  color: var(--accent-color);
+  color: #0d6efd;
 }
 
-.mobile-drawer-footer {
+.mobile-drawer-footer,
+.hamburger-btn {
   display: none;
 }
 
-/* Header Actions & Alignment */
+/* Header Actions */
 .navbar-actions {
   display: flex;
   align-items: center;
@@ -116,13 +115,12 @@
   font-weight: 600;
   font-size: 0.9rem;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   line-height: 1;
 }
 
 .header-call-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
 .phone-icon-pulse {
@@ -143,57 +141,36 @@
   }
 }
 
-/* Hamburger Button Alignment */
-.hamburger-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  color: var(--text-primary);
-  cursor: pointer;
-  padding: 6px;
-  z-index: 1002;
-  transition: transform 0.2s ease;
-}
-
-.hamburger-btn:active {
-  transform: scale(0.9);
-}
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 900px) {
-  .header-call-btn span {
-    display: none;
-  }
-
-  .header-call-btn {
-    padding: 8px 10px;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-  }
-
-  .navbar-container {
-    padding: 10px 4%;
+/* Responsive Mobile Drawer with Zero Horizontal Overflow */
+@media (max-width: 1024px) {
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #0f172a;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1002;
   }
 
   .navbar-links {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
-    max-width: 260px;
+    width: 260px;
     height: 100vh;
-    background-color: var(--bg-primary);
+    background-color: #ffffff;
     flex-direction: column;
     align-items: flex-start;
     padding: 80px 20px 30px 20px;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
-    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: right 0.35s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 1001;
     gap: 16px;
+    overflow-x: hidden;
   }
 
   .navbar-links.active {
@@ -205,7 +182,7 @@
     font-weight: 600;
     width: 100%;
     padding-bottom: 8px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .mobile-drawer-footer {
@@ -240,5 +217,22 @@
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     z-index: 1000;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-call-btn span {
+    display: none;
+  }
+
+  .header-call-btn {
+    padding: 8px 10px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar-container {
+    padding: 10px 4%;
   }
 }
