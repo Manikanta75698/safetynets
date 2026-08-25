@@ -1,91 +1,125 @@
 import React from 'react';
 import './Services.css';
+import { FaCheckCircle, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
-// Importing local images net1 to net8 from src/assets/
+// Import only existing images from assets folder
 import net1 from '../../assets/net1.jpg';
 import net2 from '../../assets/net2.jpg';
-import net3 from '../../assets/net3.jpg';
+import hero2 from '../../assets/hero2.jpeg';
+import hero4 from '../../assets/hero4.jpg';
+import net6 from '../../assets/net6.jpeg';
 import net4 from '../../assets/net4.jpg';
-import net5 from '../../assets/net5.jpg';
-import net6 from '../../assets/net6.jpg';
-import net7 from '../../assets/net7.jpg';
-import net8 from '../../assets/net8.jpg';
+import hero3 from '../../assets/hero3.jpeg';
+import net8 from '../../assets/net8.jpeg';
+
+const servicesData = [
+  {
+    id: 1,
+    title: "Balcony Safety Nets",
+    image: net1,
+    description: "Protect your loved ones and pets from accidental falls. Strong, durable, and UV-resistant high-tensile nets that don't block your view.",
+    features: ["100% Child & Pet Safe", "Weather Resistant", "Transparent View"]
+  },
+  {
+    id: 2,
+    title: "Pigeon & Anti-Bird Nets",
+    image: net2,
+    description: "Keep your spaces clean and free from bird droppings and health hazards. Premium quality nets designed to last for years without tearing.",
+    features: ["Zero Pigeon Entry", "Unobstructed Sunlight", "Heavy-Duty Nylon"]
+  },
+  {
+    id: 3,
+    title: "Window & Balcony Spikes",
+    image: hero2,
+    description: "High-grade polycarbonate and stainless steel bird spikes to prevent pigeons and other birds from sitting on window ledges and railings.",
+    features: ["100% Effective Deterrent", "Rust-Free & Long Lasting", "Aesthetic & Low Profile"]
+  },
+  {
+    id: 4,
+    title: "Car Parking Safety Nets",
+    image: hero4,
+    description: "Durable shading and protective net sheds designed for car parking slots to safeguard vehicles from sun heat, debris, and bird droppings.",
+    features: ["UV Heat Protection", "Debris & Leaf Shield", "Strong Supporting Frames"]
+  },
+  {
+    id: 5,
+    title: "Stainless Steel Invisible Grills",
+    image: net6,
+    description: "Modern SS 316 invisible grills that offer high-level security without ruining the architectural aesthetics of your balcony or windows.",
+    features: ["Rust-Proof SS 316", "400kg+ Tensile Strength", "Sleek Modern Look"]
+  },
+  {
+    id: 6,
+    title: "Cricket Practice Nets",
+    image: net4, // Using hero4 since net7 was deleted
+    description: "Professional Cricket Practice Nets designed for terrace boxes, schools, academies, and residential turf areas with high impact absorption.",
+    features: ["High Impact Resistance", "UV Stabilized", "Customized Box Setup"]
+  },
+  {
+    id: 7,
+    title: "Building & Construction Nets",
+    image: hero3,
+    description: "Robust debris safety nets engineered for under-construction high-rise buildings to protect workers and passersby from falling materials.",
+    features: ["OSHA Standard Safety", "High Tear Strength", "Complete Site Coverage"]
+  },
+  {
+    id: 8,
+    title: "Monkey & Animal Safety Nets",
+    image: net8,
+    description: "Heavy-duty wire-mesh reinforced safety nets designed to prevent monkey nuisance and stray animal intrusion into balconies and utility areas.",
+    features: ["Extra Tough Wire Mesh", "Secure Lock Bounds", "Complete Peace of Mind"]
+  }
+];
 
 const Services = () => {
-  const serviceData = [
-    {
-      id: 1,
-      title: "Balcony Safety Nets",
-      description: "Protect your loved ones and pets from accidental falls. Strong, durable, and transparent nets that don't block your view.",
-      image: net1
-    },
-    {
-      id: 2,
-      title: "Pigeon / Anti-Bird Nets",
-      description: "Keep your spaces clean and free from bird droppings. We use high-quality Garware nets that last for years without tearing.",
-      image: net2
-    },
-    {
-      id: 3,
-      title: "Invisible Grills",
-      description: "Modern stainless steel cables that offer high-level security without ruining the aesthetics of your balcony or windows.",
-      image: net3
-    },
-    {
-      id: 4,
-      title: "Cricket Practice Net",
-      description: "Professional Cricket Practice Nets designed for schools, academies, playgrounds, and training areas, ensuring safe practice sessions.",
-      image: net4
-    },
-    {
-      id: 5,
-      title: "Children Safety Nets",
-      description: "Ensure 100% safety for your kids around open balconies, staircases, and windows. Strong enough to bear heavy weight.",
-      image: net5
-    },
-    {
-      id: 6,
-      title: "Building & Construction Nets",
-      description: "Prevent debris falls and ensure worker safety with our industrial-grade safety nets. Perfect for all building construction sites.",
-      image: net6
-    },
-    {
-      id: 7,
-      title: "Duct Area Safety Nets",
-      description: "Installs premium Duct Area Safety Net to prevent accidents, bird entry, and object falls while maintaining ventilation.",
-      image: net7
-    },
-    {
-      id: 8,
-      title: "Monkey Safety Net",
-      description: "Provides strong Monkey Safety Net to prevent monkey entry into homes, apartments, and commercial spaces.",
-      image: net8
-    }
-  ];
+  const phoneNumber = "8143267425";
 
   return (
     <section className="services-section" id="services">
       <div className="services-header">
-        <h2>Our Premium <span className="highlight">Services</span></h2>
-        <p>Expert bird netting and safety solutions tailored for Bengaluru homes and businesses.</p>
+        <span className="services-subtitle">Expert Protection Solutions</span>
+        <h2>Our Professional <span className="highlight">Safety Services</span></h2>
+        <p>Certified installation across Bengaluru with 5 to 10 years warranty and free doorstep inspection.</p>
       </div>
 
       <div className="services-grid">
-        {serviceData.map((service) => (
-          <div className="service-card" key={service.id}>
-            <div className="service-img-container">
-              <img src={service.image} alt={service.title} className="service-img" />
+        {servicesData.map((service) => {
+          const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(`Hi OurSafetyNets, I am interested in getting ${service.title} installed. Please share details.`)}`;
+
+          return (
+            <div className="service-card" key={service.id}>
+              <div className="service-img-wrapper">
+                <img src={service.image} alt={service.title} loading="lazy" />
+                <div className="service-badge-tag">Certified Quality</div>
+              </div>
+
+              <div className="service-body">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+
+                <ul className="service-features">
+                  {service.features.map((feat, idx) => (
+                    <li key={idx}>
+                      <FaCheckCircle className="feat-icon" /> {feat}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="service-actions">
+                  <a href={`tel:+91${phoneNumber}`} className="service-call-btn">
+                    <FaPhoneAlt /> Call Now
+                  </a>
+                  <a href={whatsappUrl} className="service-wa-btn" target="_blank" rel="noopener noreferrer">
+                    <FaWhatsapp /> Get Quote
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="service-card-body">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <a href="tel:+918143267425" className="card-btn">Book Now</a>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
 };
 
-export default Services; 
+export default Services;

@@ -1,80 +1,91 @@
 import React from 'react';
 import './Footer.css';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebookF, FaShieldAlt } from 'react-icons/fa';
+import { FaShieldAlt, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   const phoneNumber = "8143267425";
-  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi, I'm interested in safety nets / invisible grills. Please share details.")}`;
+  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need more info about safety nets installation.")}`;
 
   return (
-    <footer className="footer-section">
+    <footer className="footer-section" id="contact">
       <div className="footer-container">
 
-        {/* Column 1: About Brand */}
+        {/* Column 1: Brand Info */}
         <div className="footer-col">
           <div className="footer-logo">
-            <span className="logo-icon-wrap"><FaShieldAlt /></span>
-            <h2>OurSafetyNets</h2>
+            <div className="logo-icon-wrapper">
+              <FaShieldAlt />
+            </div>
+            <div>
+              <h3>OurSafetyNets</h3>
+              <p>BENGALURU</p>
+            </div>
           </div>
-          <p className="footer-desc">
-            Bengaluru's most trusted provider for high-quality Balcony Safety Nets, Pigeon Nets, Invisible Grills, and Sports Nets. Ensuring complete safety with professional same-day installation.
+          <p className="footer-about">
+            Bengaluru’s most trusted safety partner. We deliver high-tensile balcony safety nets, pigeon anti-bird netting, and premium invisible grills with expert installation.
           </p>
-          <div className="footer-socials">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+          <div className="footer-contact-info">
+            <p><FaMapMarkerAlt className="f-icon" /> Serving All Over Bengaluru</p>
+            <p><FaPhoneAlt className="f-icon" /> <a href={`tel:+91${phoneNumber}`}>+91 {phoneNumber}</a></p>
+            <p><FaWhatsapp className="f-icon" /> <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
           </div>
         </div>
 
         {/* Column 2: Quick Links */}
         <div className="footer-col">
-          <h3>Quick Links</h3>
-          <ul className="footer-links">
+          <h4>Quick Links</h4>
+          <ul className="footer-links-list">
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#process">Our Process</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#process">Installation Process</a></li>
             <li><a href="#reviews">Customer Reviews</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#contact">Get Free Quote</a></li>
           </ul>
         </div>
 
-        {/* Column 3: Service Areas in Bengaluru */}
+        {/* Column 3: Safety Solutions */}
         <div className="footer-col">
-          <h3>Service Areas</h3>
-          <ul className="footer-links service-areas-list">
-            <li><span>Whitefield & Marathahalli</span></li>
-            <li><span>HSR Layout & Koramangala</span></li>
-            <li><span>Indiranagar & MG Road</span></li>
-            <li><span>Electronic City & BTM</span></li>
-            <li><span>Hebbal & Yelahanka</span></li>
-            <li><span>Mathikere & Yeshwanthpur</span></li>
+          <h4>Safety Solutions</h4>
+          <ul className="footer-links-list">
+            <li><a href="#services">Pigeon & Anti-Bird Nets</a></li>
+            <li><a href="#services">Balcony Safety Nets</a></li>
+            <li><a href="#services">Stainless Steel Invisible Grills</a></li>
+            <li><a href="#services">Cricket Practice Nets</a></li>
+            <li><a href="#services">Car Parking & Shed Nets</a></li>
           </ul>
         </div>
 
-        {/* Column 4: Contact Info */}
+        {/* Column 4: SEO Service Areas in Bengaluru */}
         <div className="footer-col">
-          <h3>Contact Info</h3>
-          <ul className="footer-contact-info">
-            <li>
-              <FaMapMarkerAlt className="footer-icon" />
-              <span>Bangalore - 560054</span>
-            </li>
-            <li>
-              <FaPhoneAlt className="footer-icon" />
-              <a href="tel:+918143267425">+91 81432 67425</a>
-            </li>
-            <li>
-              <FaEnvelope className="footer-icon" />
-              <a href="mailto:support@oursafetynets.com">support@oursafetynets.com</a>
-            </li>
-          </ul>
+          <h4>Service Areas in Bengaluru</h4>
+          <p className="seo-areas-text">
+            Free doorstep inspection and same-day installation across major Bengaluru locations:
+          </p>
+          <div className="seo-tags">
+            <span>Whitefield</span>
+            <span>Electronic City</span>
+            <span>HSR Layout</span>
+            <span>Koramangala</span>
+            <span>Indiranagar</span>
+            <span>Marathahalli</span>
+            <span>Bellandur</span>
+            <span>Hebbal</span>
+            <span>Jayanagar</span>
+            <span>JP Nagar</span>
+            <span>Banashankari</span>
+            <span>Yelahanka</span>
+            <span>Sarjapur Road</span>
+            <span>BTM Layout</span>
+          </div>
         </div>
 
       </div>
 
-      {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} OurSafetyNets Bengaluru. All Rights Reserved.</p>
+        <div className="footer-bottom-container">
+          <p>&copy; {new Date().getFullYear()} OurSafetyNets Bengaluru. All Rights Reserved.</p>
+          <p className="footer-designer">Crafted for Maximum Home Safety</p>
+        </div>
       </div>
     </footer>
   );

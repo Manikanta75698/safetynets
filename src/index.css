@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* DEFAULT LIGHT THEME (System Fallback) */
 :root {
-  /* LIGHT MODE VARIABLES */
   --bg-primary: #f8f9fa;
   --bg-secondary: #ffffff;
   --text-primary: #1a1a1a;
@@ -16,21 +16,21 @@
   --input-bg: #ffffff;
 }
 
-/* DARK MODE MAGIC */
+/* AUTOMATIC SYSTEM DARK THEME */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #121212;
-    --bg-secondary: #1e1e1e;
+    --bg-primary: #0b132b;
+    --bg-secondary: #111c38;
     --text-primary: #f3f4f6;
-    --text-secondary: #9ca3af;
-    --accent-color: #4facfe;
-    --accent-hover: #76c5ff;
-    --border-color: #374151;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    --nav-bg: rgba(30, 30, 30, 0.85);
-    --success-color: #2ecc71;
-    --success-hover: #27ae60;
-    --input-bg: #2a2a2a;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --border-color: rgba(255, 255, 255, 0.12);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --nav-bg: rgba(11, 19, 43, 0.9);
+    --success-color: #22c55e;
+    --success-hover: #16a34a;
+    --input-bg: #111c38;
   }
 }
 
@@ -46,7 +46,6 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  /* Permanently prevents horizontal side-scrolling / white space bug */
 }
 
 body {
