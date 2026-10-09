@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import { FaShieldAlt, FaStar, FaChevronLeft, FaChevronRight, FaCheckCircle } from 'react-icons/fa';
+import { FaShieldAlt, FaChevronLeft, FaChevronRight, FaCheckCircle } from 'react-icons/fa';
 
 import slide1 from '../../assets/hero1.jpeg';
 import slide2 from '../../assets/hero2.jpeg';
@@ -39,7 +39,7 @@ const Hero = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      handleNext();
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5500);
     return () => clearInterval(timer);
   }, [currentSlide]);
@@ -69,8 +69,7 @@ const Hero = () => {
       <div className="hero-container">
         <div key={currentSlide} className="hero-content-animated">
           <div className="hero-badge">
-            <FaStar className="star-icon" />
-            <span>4.9/5 (5000+ Customers)</span>
+            <span>Bengaluru Safety Netting</span>
             <span className="badge-divider">•</span>
             <span className="badge-category">{heroSlides[currentSlide].badge}</span>
           </div>
@@ -95,15 +94,15 @@ const Hero = () => {
           <div className="hero-trust-row">
             <div className="trust-item">
               <FaCheckCircle className="trust-icon" />
-              <span>Free Doorstep Inspection</span>
+              <span>Balcony & Window Options</span>
             </div>
             <div className="trust-item">
               <FaShieldAlt className="trust-icon" />
-              <span>5 to 10 Years Warranty</span>
+              <span>Net & Grill Solutions</span>
             </div>
             <div className="trust-item">
               <FaCheckCircle className="trust-icon" />
-              <span>Same Day Installation</span>
+              <span>Serving Bengaluru</span>
             </div>
           </div>
         </div>

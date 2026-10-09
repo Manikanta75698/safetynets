@@ -5,23 +5,23 @@ import { FaChevronDown } from 'react-icons/fa';
 const faqData = [
   {
     question: "What is the warranty provided on safety nets and invisible grills?",
-    answer: "We provide a solid 5 to 10 years warranty on all our high-tensile safety nets and stainless steel invisible grills against manufacturing defects and wear-tear."
+    answer: "Warranty terms can vary by product and material. Ask us to confirm the applicable coverage for your selected net or grill in the quote."
   },
   {
     question: "Do pigeon safety nets block sunlight and outside view?",
-    answer: "No! Our nets are made of high-grade translucent Garware nylon threads which are extremely thin. They are virtually invisible from a distance and do not block your ventilation, sunlight, or scenic view."
+    answer: "Net visibility depends on the material, mesh and viewing distance. Ask to compare available options and how each may affect light, ventilation and the view from your balcony."
   },
   {
     question: "Are safety nets safe and strong enough for children and pets?",
-    answer: "Yes, 100%. Our balcony safety nets have high tensile strength (can withstand heavy loads up to 150+ kg) and prevent accidental falls for toddlers and pets like cats and dogs."
+    answer: "A net can add a barrier, but no product should be treated as a guarantee against falls. Ask about the material, installation points and suitable use for your space; keep children supervised around open edges."
   },
   {
     question: "How long does the installation process take?",
-    answer: "A standard balcony or window safety net installation takes only about 45 to 90 minutes. Our expert technicians complete it cleanly without damaging your walls."
+    answer: "Timing depends on the size, access and fixing points of the area. Share photos or request a site measurement for an estimate."
   },
   {
     question: "Do you offer free inspection across Bengaluru?",
-    answer: "Yes! We offer free doorstep inspection and measurement across all major areas in Bengaluru including Whitefield, Electronic City, HSR Layout, Koramangala, and more."
+    answer: "Inspection availability may depend on your location and project. Contact us with your area and requirements to confirm whether a site visit is available."
   }
 ];
 
@@ -45,13 +45,14 @@ const FAQ = () => {
           <div
             className={`faq-item ${activeIndex === index ? 'active' : ''}`}
             key={index}
-            onClick={() => toggleFAQ(index)}
           >
-            <div className="faq-question">
+            <button className="faq-trigger" type="button" aria-expanded={activeIndex === index} onClick={() => toggleFAQ(index)}>
+              <div className="faq-question">
               <h3>{item.question}</h3>
               <FaChevronDown className="faq-icon" />
-            </div>
-            <div className="faq-answer">
+              </div>
+            </button>
+            <div className="faq-answer" aria-hidden={activeIndex !== index}>
               <p>{item.answer}</p>
             </div>
           </div>

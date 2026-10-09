@@ -14,14 +14,51 @@ import CTA from './components/CTA/CTA';
 import Footer from './components/Footer/Footer';
 import WhatsApp from './components/WhatsApp/WhatsApp';
 import MobileBar from './components/MobileBar/MobileBar';
+import heroImage from './assets/hero1.jpeg';
+
+const siteUrl = 'https://oursafetynets.in';
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'OurSafetyNets',
+  url: siteUrl,
+  image: `${siteUrl}${heroImage}`,
+  telephone: '+918143267425',
+  email: '@oursafetynets.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bengaluru',
+    addressRegion: 'Karnataka',
+    addressCountry: 'IN',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Bengaluru',
+  },
+  knowsAbout: [
+    'Balcony safety nets',
+    'Pigeon-control netting',
+    'Invisible grills',
+    'Sports nets',
+    'Construction safety netting',
+  ],
+};
 
 function App() {
   return (
     <>
       <Helmet>
-        <title>OurSafetyNets | Best Pigeon Nets & Invisible Grills in Bengaluru</title>
-        <meta name="description" content="Get the best Safety Nets, Pigeon Nets, and Invisible Grills in Bengaluru. Free installation, premium quality, and 20+ years of experience. Call 8143267425." />
-        <meta name="keywords" content="safety nets Bengaluru, pigeon nets Bangalore, invisible grills, balcony safety nets, sports nets, anti bird nets" />
+        <title>Safety Nets &amp; Invisible Grills in Bengaluru | OurSafetyNets</title>
+        <meta name="description" content="Explore balcony safety nets, pigeon-control netting, invisible grills and sports nets in Bengaluru. Call OurSafetyNets to discuss your requirements." />
+        <link rel="canonical" href={`${siteUrl}/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="OurSafetyNets" />
+        <meta property="og:title" content="Safety Nets & Invisible Grills in Bengaluru | OurSafetyNets" />
+        <meta property="og:description" content="Balcony safety nets, pigeon-control netting, invisible grills and sports nets in Bengaluru." />
+        <meta property="og:url" content={`${siteUrl}/`} />
+        <meta property="og:image" content={`${siteUrl}${heroImage}`} />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       </Helmet>
 
       <Navbar />

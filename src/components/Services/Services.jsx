@@ -25,105 +25,105 @@ const servicesData = [
     title: "Balcony Safety Nets",
     image: net1,
     description: "Protect your loved ones and pets from accidental falls. Strong, durable, and UV-resistant high-tensile nets that don't block your view.",
-    features: ["100% Child & Pet Safe", "Weather Resistant", "Transparent View"]
+    features: ["Balcony-edge coverage", "Options for apartments", "Discuss net visibility"]
   },
   {
     id: 2,
     title: "Pigeon & Anti-Bird Nets",
     image: net2,
     description: "Keep your spaces clean and free from bird droppings and health hazards. Premium quality nets designed to last for years without tearing.",
-    features: ["Zero Pigeon Entry", "Unobstructed Sunlight", "Heavy-Duty Nylon"]
+    features: ["Balcony & utility areas", "Airflow-conscious options", "Ask about mesh materials"]
   },
   {
     id: 3,
     title: "Window & Balcony Spikes",
     image: hero2,
     description: "High-grade polycarbonate and stainless steel bird spikes to prevent pigeons and other birds from sitting on window ledges and railings.",
-    features: ["100% Effective Deterrent", "Rust-Free & Long Lasting", "Aesthetic & Low Profile"]
+    features: ["Ledge & railing options", "Polycarbonate or steel", "Compare profiles"]
   },
   {
     id: 4,
     title: "Car Parking Safety Nets",
     image: hero4,
     description: "Durable shading and protective net sheds designed for car parking slots to safeguard vehicles from sun heat, debris, and bird droppings.",
-    features: ["UV Heat Protection", "Debris & Leaf Shield", "Strong Supporting Frames"]
+    features: ["Shade and debris cover options", "Parking-area measurements", "Ask about support frames"]
   },
   {
     id: 5,
     title: "Stainless Steel Invisible Grills",
     image: net6,
     description: "Modern SS 316 invisible grills that offer high-level security without ruining the architectural aesthetics of your balcony or windows.",
-    features: ["Rust-Proof SS 316", "400kg+ Tensile Strength", "Sleek Modern Look"]
+    features: ["Stainless-steel cable options", "For selected balconies/windows", "Compare cable spacing"]
   },
   {
     id: 6,
     title: "Cricket Practice Nets",
     image: net4,
     description: "Professional Cricket Practice Nets designed for terrace boxes, schools, academies, and residential turf areas with high impact absorption.",
-    features: ["High Impact Resistance", "UV Stabilized", "Customized Box Setup"]
+    features: ["Terrace & practice areas", "Custom sizing options", "For schools and academies"]
   },
   {
     id: 7,
     title: "Building & Construction Nets",
     image: hero3,
     description: "Robust debris safety nets engineered for under-construction high-rise buildings to protect workers and passersby from falling materials.",
-    features: ["OSHA Standard Safety", "High Tear Strength", "Complete Site Coverage"]
+    features: ["Building-perimeter coverage", "Net options by project", "Ask for a site assessment"]
   },
   {
     id: 8,
     title: "Monkey & Animal Safety Nets",
     image: net8,
     description: "Heavy-duty wire-mesh reinforced safety nets designed to prevent monkey nuisance and stray animal intrusion into balconies and utility areas.",
-    features: ["Extra Tough Wire Mesh", "Secure Lock Bounds", "Complete Peace of Mind"]
+    features: ["Balcony & utility areas", "Review mesh type by site", "Discuss fixing options"]
   },
   {
     id: 9,
     title: "Duct Area Safety Nets",
     image: net9, // Using net10 for Duct, change if needed
     description: "Secure open ventilation shafts and duct areas in apartment buildings. Prevents pigeon intrusion, debris buildup, and accidental falls.",
-    features: ["Total Pigeon Blockage", "Ventilation Friendly", "Heavy-Duty HDPE Net"]
+    features: ["Ventilation-shaft netting", "Pigeon-control options", "Site-specific measurement"]
   },
   {
     id: 10,
     title: "House Covering Safety Nets",
     image: net10, // Using hero3 for House, change if needed
     description: "Complete exterior safety netting solutions for independent houses and villas to protect against monkeys, stray animals, and falling debris.",
-    features: ["Full Villa Protection", "Weatherproof Build", "Secure Anchorage"]
+    features: ["Exterior netting options", "Custom coverage by property", "Discuss anchoring"]
   },
   {
     id: 11,
-    title: "Staircase Safety Nets  ",
+    title: "Staircase Safety Nets",
     image: net11, // Using net11 for Stairs
     description: "Protective safety barriers installed along open staircase railings to prevent toddlers and pets from slipping through vertical gaps.",
-    features: ["Toddler Fall Prevention", "Tight Mesh Spacing", "Neat & Secure Fit"]
+    features: ["Open-railing coverage", "Options for family homes", "Measure before installation"]
   },
   {
     id: 12,
     title: "Invisible Grill For Windows",
     image: net12, // Using net12 for Window Grill
     description: "Sleek and robust SS 316 invisible grills tailored specifically for windows to ensure uncompromising security and unobstructed airflow.",
-    features: ["Rust-Proof SS Cables", "Elegant Window Look", "Zero Maintenance"]
+    features: ["Stainless-steel cable options", "Window-specific sizing", "Compare finish and spacing"]
   },
   {
     id: 13,
     title: "Mosquito Safety Nets",
     image: net13, // Using net13 for Mosquito
     description: "High-density fine mesh screen nets designed to keep mosquitoes, flies, and unwanted insects out while allowing fresh air circulation.",
-    features: ["Fine Anti-Insect Mesh", "Easy to Clean", "Fresh Air Flow"]
+    features: ["Fine screen options", "Window-specific sizing", "Compare mesh materials"]
   },
   {
     id: 14,
     title: "Child Safety Nets",
     image: net14, // Using net14 child safety
-    description: "Protective safety barriers installed along open staircase railings to prevent toddlers and pets from slipping through vertical gaps.",
-    features: ["Fine Anti-Insect Mesh", "Easy to Clean", "Fresh Air Flow"]
+    description: "Safety net options for balcony edges, stair openings and other spaces where children or pets need an added barrier.",
+    features: ["Balcony and stair openings", "Select mesh for the space", "Ask about fixing points"]
   },
   {
     id: 15,
     title: "Staircase Invisible Grills",
     image: net15, // Using net14 child safety
-    description: "Heavy-duty wire-mesh reinforced safety nets designed to Child safety",
-    features: ["Rust-Proof SS Cables", "Elegant Window Look", "Zero Maintenance"]
+    description: "Staircase invisible-grill options measured for your railing layout and the opening you want to secure.",
+    features: ["Staircase cable systems", "Custom measurements", "Discuss cable spacing"]
   }
 ];
 
@@ -135,7 +135,7 @@ const Services = () => {
       <div className="services-header">
         <span className="services-subtitle">Expert Protection Solutions</span>
         <h2>Our Professional <span className="highlight">Safety Services</span></h2>
-        <p>Certified installation across Bengaluru with 5 to 10 years warranty and free doorstep inspection.</p>
+        <p>Balcony, pigeon-control, window, sports and construction netting options for homes and projects across Bengaluru.</p>
       </div>
 
       <div className="services-grid">
@@ -146,7 +146,7 @@ const Services = () => {
             <div className="service-card" key={service.id}>
               <div className="service-img-wrapper">
                 <img src={service.image} alt={service.title} loading="lazy" />
-                <div className="service-badge-tag">Certified Quality</div>
+                <div className="service-badge-tag">Installation Options</div>
               </div>
 
               <div className="service-body">

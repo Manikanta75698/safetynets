@@ -1,55 +1,39 @@
 import React from 'react';
-import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 import './Testimonials.css';
 
-const Testimonials = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: "Ashwith",
-      service: "Pigeon Safety Nets",
-      review: "OurSafetyNets provided excellent pigeon control service in Bangalore. The team was professional, on time and the installation quality was outstanding."
-    },
-    {
-      id: 2,
-      name: "Ramesh Kumar",
-      service: "Balcony Safety Nets",
-      review: "Very satisfied with the service from OurSafetyNets. High-tensile quality materials, neat finishing and clear communication throughout the work."
-    },
-    {
-      id: 3,
-      name: "Pavithra",
-      service: "Invisible Grills",
-      review: "OurSafetyNets delivered exactly what they promised. Elegant invisible grills with an unobstructed city view. Great service and reasonable pricing."
-    }
-  ];
+const serviceGuide = [
+  {
+    title: 'Balcony and window safety',
+    description: 'Compare netting and invisible-grill options for the openings and layout of your home.',
+  },
+  {
+    title: 'Pigeon control',
+    description: 'Ask about netting options for balconies, utility areas, ducts and other open spaces.',
+  },
+  {
+    title: 'Sports and project netting',
+    description: 'Discuss the area, intended use and measurements before choosing a net for a terrace, academy or site.',
+  },
+];
 
-  return (
-    <section className="testimonials-section" id="reviews">
-      <div className="testimonials-header">
-        <h2>What Our <span className="highlight">Customers Say</span></h2>
-        <p>Rated 4.9/5 by over 5000+ happy families in Bengaluru.</p>
-      </div>
+const Testimonials = () => (
+  <section className="testimonials-section" id="net-guide">
+    <div className="testimonials-header">
+      <h2>Choose the <span className="highlight">Right Net for Your Space</span></h2>
+      <p>Tell us what you need to cover in Bengaluru. We can discuss the available netting and grill options.</p>
+    </div>
 
-      <div className="testimonials-grid">
-        {reviews.map((item) => (
-          <div className="review-card" key={item.id}>
-            <FaQuoteLeft className="quote-icon" />
-            <p className="review-text">"{item.review}"</p>
-            <div className="review-footer">
-              <div className="reviewer-info">
-                <h4>{item.name}</h4>
-                <span>{item.service}</span>
-              </div>
-              <div className="stars">
-                <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+    <div className="testimonials-grid">
+      {serviceGuide.map((item, index) => (
+        <article className="review-card" key={item.title}>
+          <span className="guide-number" aria-hidden="true">0{index + 1}</span>
+          <h3>{item.title}</h3>
+          <p className="review-text">{item.description}</p>
+          <a className="guide-link" href="#contact">Discuss your requirement <span aria-hidden="true">→</span></a>
+        </article>
+      ))}
+    </div>
+  </section>
+);
 
 export default Testimonials;

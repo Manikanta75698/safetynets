@@ -7,7 +7,7 @@ const Footer = () => {
   const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need information about safety net installation in Bangalore.")}`;
 
   return (
-    <footer className="footer-section" id="contact">
+    <footer className="footer-section">
       <div className="footer-container">
 
         {/* Column 1: Brand Info */}
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="footer-about">
-            Bengaluru’s most trusted safety partner. We provide professional, high-tensile safety nets, anti-bird pigeon netting, and premium invisible grills with 5 to 10 years warranty.
+            OurSafetyNets helps Bengaluru customers explore safety nets, anti-bird netting and invisible grills. Contact us to discuss your space and request a quote.
           </p>
           <div className="footer-contact-info">
             <p><FaMapMarkerAlt className="f-icon" /> Serving All Over Bengaluru</p>
@@ -75,54 +75,10 @@ const Footer = () => {
 
       </div>
 
-      {/* SEO Keywords Full-Width Directory Strip */}
-      <div className="footer-seo-directory">
-        <div className="seo-directory-container">
-          <h4>Explore Popular Safety Solutions & Keywords</h4>
-          <div className="seo-directory-grid">
-            <div className="seo-cat">
-              <h5>Invisible Grills</h5>
-              <ul>
-                <li><a href="#services">For Balcony in Bangalore</a></li>
-                <li><a href="#services">For Windows in Bangalore</a></li>
-                <li><a href="#services">Installation in Bangalore</a></li>
-                <li><a href="#services">For Kids & Pet Safety</a></li>
-              </ul>
-            </div>
-            <div className="seo-cat">
-              <h5>Sports Nets</h5>
-              <ul>
-                <li><a href="#services">Cricket Practice Nets</a></li>
-                <li><a href="#services">All Types of Sports Nets</a></li>
-                <li><a href="#services">Terrace Cricket Nets</a></li>
-              </ul>
-            </div>
-            <div className="seo-cat">
-              <h5>Safety Nets</h5>
-              <ul>
-                <li><a href="#services">Balcony Safety Nets</a></li>
-                <li><a href="#services">Building & Construction</a></li>
-                <li><a href="#services">Car Parking Nets</a></li>
-                <li><a href="#services">Monkey Safety Nets</a></li>
-              </ul>
-            </div>
-            <div className="seo-cat">
-              <h5>Bird & Pigeon Nets</h5>
-              <ul>
-                <li><a href="#services">Anti Bird Nets</a></li>
-                <li><a href="#services">Bird Control Spikes</a></li>
-                <li><a href="#services">Nets Fixing Near Me</a></li>
-                <li><a href="#services">Pigeon Netting Price</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p>&copy; {new Date().getFullYear()} OurSafetyNets Bengaluru. All Rights Reserved.</p>
-          <p className="footer-designer">Crafted for Maximum Home Safety</p>
+          <p className="footer-designer">Safety nets and invisible grills in Bengaluru</p>
         </div>
       </div>
     </footer>

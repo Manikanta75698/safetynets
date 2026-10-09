@@ -10,7 +10,7 @@ const CTA = () => {
     <section className="cta-section">
       <div className="cta-content">
         <h2>Protect Your Home & Family Today!</h2>
-        <p>Get professional installation of pigeon nets, balcony safety nets, and invisible grills across Bengaluru with free inspection.</p>
+        <p>Discuss pigeon netting, balcony safety nets or invisible grills for your Bengaluru property and request a quote.</p>
         <div className="cta-buttons">
           <a href={`tel:+91${phoneNumber}`} className="cta-call-btn">
             <FaPhoneAlt /> Call Now: +91 {phoneNumber}

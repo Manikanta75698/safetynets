@@ -1,5 +1,5 @@
 .testimonials-section {
-  padding: 80px 10%;
+  padding: clamp(58px, 7vw, 96px) clamp(18px, 8vw, 120px);
   background-color: var(--bg-primary);
 }
 
@@ -9,7 +9,7 @@
 }
 
 .testimonials-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
   color: var(--text-primary);
   margin-bottom: 15px;
 }
@@ -21,14 +21,16 @@
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 295px), 1fr));
+  gap: clamp(16px, 2vw, 26px);
 }
 
 .review-card {
   background-color: var(--bg-secondary);
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease;
@@ -36,6 +38,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.guide-number { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin-bottom: 22px; border-radius: 14px; background: var(--accent-soft); color: var(--accent-color); font-family: 'Manrope', sans-serif; font-weight: 800; }
+.review-card h3 { color: var(--text-primary); font-size: 1.2rem; margin-bottom: 12px; }
+.guide-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-color); font-weight: 700; text-decoration: none; }
+.guide-link:hover { gap: 12px; }
 
 .review-card:hover {
   transform: translateY(-5px);
@@ -54,7 +61,7 @@
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 20px;
-  font-style: italic;
+  font-style: normal;
 }
 
 .review-footer {

@@ -81,11 +81,14 @@ const SportsGallery = () => {
         {/* Dots Pagination */}
         <div className="slider-dots">
           {sportsSlides.map((_, index) => (
-            <span
+            <button
               key={index}
+              type="button"
               className={`dot ${index === currentIndex ? 'active' : ''}`}
+              aria-label={`Go to sports image ${index + 1}`}
+              aria-current={index === currentIndex ? 'true' : undefined}
               onClick={() => setCurrentIndex(index)}
-            ></span>
+            />
           ))}
         </div>
       </div>

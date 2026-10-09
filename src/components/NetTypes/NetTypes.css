@@ -1,5 +1,5 @@
 .net-types-section {
-  padding: 80px 10%;
+  padding: clamp(58px, 7vw, 96px) clamp(18px, 8vw, 120px);
   background-color: var(--bg-secondary);
 }
 
@@ -9,7 +9,7 @@
 }
 
 .net-types-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
   color: var(--text-primary);
   margin-bottom: 15px;
 }
@@ -45,10 +45,10 @@
   border-radius: 50%;
   overflow: hidden;
   /* Signature Cyan/Teal border ring matching the reference image */
-  border: 5px solid #00acc1;
-  box-shadow: 0 8px 25px rgba(0, 172, 193, 0.25);
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent-color) 22%, transparent);
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: var(--bg-secondary);
 }
 
 .net-circle-img {
@@ -60,6 +60,10 @@
 
 .net-type-card:hover .net-circle-img {
   transform: scale(1.1);
+}
+
+@media (hover: none) {
+  .net-type-card:active .net-circle-img { transform: scale(1.06); }
 }
 
 .net-type-card h3 {

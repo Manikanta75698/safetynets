@@ -5,16 +5,16 @@ import { FaComments, FaDraftingCompass, FaTools, FaShieldAlt } from 'react-icons
 const Process = () => {
   const steps = [
     { id: "01", title: "Consultation", desc: "We assess your area and understand your specific safety needs.", icon: <FaComments /> },
-    { id: "02", title: "Customization", desc: "Selecting high-quality Garware nets tailored exactly to your space.", icon: <FaDraftingCompass /> },
-    { id: "03", title: "Installation", desc: "Expert fixing by our skilled team with minimal drilling required.", icon: <FaTools /> },
-    { id: "04", title: "Maintenance", desc: "Long-lasting protection with ongoing support and warranty.", icon: <FaShieldAlt /> }
+    { id: "02", title: "Options", desc: "Compare available net materials, finishes and grill options for the space.", icon: <FaDraftingCompass /> },
+    { id: "03", title: "Installation", desc: "Discuss measurements, access and fixing points before confirming the work.", icon: <FaTools /> },
+    { id: "04", title: "Care", desc: "Ask about product care and the warranty terms for the selected option.", icon: <FaShieldAlt /> }
   ];
 
   return (
     <section className="process-section" id="process">
       <div className="process-header">
         <h2>Our Simple <span className="highlight">4-Step Process</span></h2>
-        <p>Experience quick and hassle-free bird control setup.</p>
+        <p>Start with your requirement, compare suitable options and confirm the details before installation.</p>
       </div>
 
       <div className="process-grid">
