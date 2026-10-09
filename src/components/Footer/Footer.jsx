@@ -4,7 +4,7 @@ import { FaShieldAlt, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from 'react-icons
 
 const Footer = () => {
   const phoneNumber = "8143267425";
-  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need information about safety net installation in Bangalore.")}`;
+  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need information about safety net installation in AP.")}`;
 
   return (
     <footer className="footer-section">
@@ -18,14 +18,14 @@ const Footer = () => {
             </div>
             <div>
               <h3>OurSafetyNets</h3>
-              <p>BENGALURU</p>
+              <p>ANDHRA PRADESH</p>
             </div>
           </div>
           <p className="footer-about">
-            OurSafetyNets helps Bengaluru customers explore safety nets, anti-bird netting and invisible grills. Contact us to discuss your space and request a quote.
+            OurSafetyNets helps AP customers explore safety nets, anti-bird netting and invisible grills. Contact us to discuss your space and request a quote.
           </p>
           <div className="footer-contact-info">
-            <p><FaMapMarkerAlt className="f-icon" /> Serving All Over Bengaluru</p>
+            <p><FaMapMarkerAlt className="f-icon" /> Serving All Over AP</p>
             <p><FaPhoneAlt className="f-icon" /> <a href={`tel:+91${phoneNumber}`}>+91 {phoneNumber}</a></p>
             <p><FaWhatsapp className="f-icon" /> <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
           </div>
@@ -56,20 +56,18 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 4: Bengaluru Service Areas */}
+        {/* Column 4: AP Service Areas */}
         <div className="footer-col">
-          <h4>Service Areas in Bengaluru</h4>
+          <h4>Service Areas in AP</h4>
           <ul className="footer-links-list areas-list">
-            <li><a href="#contact">Whitefield</a></li>
-            <li><a href="#contact">Electronic City</a></li>
-            <li><a href="#contact">HSR Layout</a></li>
-            <li><a href="#contact">Koramangala</a></li>
-            <li><a href="#contact">Indiranagar</a></li>
-            <li><a href="#contact">Jayanagar</a></li>
-            <li><a href="#contact">JP Nagar</a></li>
-            <li><a href="#contact">Marathahalli</a></li>
-            <li><a href="#contact">Bellandur</a></li>
-            <li><a href="#contact">Hebbal & Yelahanka</a></li>
+            <li><a href="#contact">Visakhapatnam</a></li>
+            <li><a href="#contact">Vijayawada</a></li>
+            <li><a href="#contact">Rajahmundry</a></li>
+            <li><a href="#contact">Kakinada</a></li>
+            <li><a href="#contact">Guntur</a></li>
+            <li><a href="#contact">Tirupati</a></li>
+            <li><a href="#contact">Nellore</a></li>
+            <li><a href="#contact">Kurnool</a></li>
           </ul>
         </div>
 
@@ -77,8 +75,8 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; {new Date().getFullYear()} OurSafetyNets Bengaluru. All Rights Reserved.</p>
-          <p className="footer-designer">Safety nets and invisible grills in Bengaluru</p>
+          <p>&copy; {new Date().getFullYear()} OurSafetyNets AP. All Rights Reserved.</p>
+          <p className="footer-designer">Safety nets and invisible grills in AP</p>
         </div>
       </div>
     </footer>

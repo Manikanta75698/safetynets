@@ -20,7 +20,7 @@ const faqData = [
     answer: "Timing depends on the size, access and fixing points of the area. Share photos or request a site measurement for an estimate."
   },
   {
-    question: "Do you offer free inspection across Bengaluru?",
+    question: "Do you offer free inspection across Andhra Pradesh?",
     answer: "Inspection availability may depend on your location and project. Contact us with your area and requirements to confirm whether a site visit is available."
   }
 ];
@@ -37,7 +37,7 @@ const FAQ = () => {
       <div className="faq-header">
         <span className="faq-subtitle">Got Questions?</span>
         <h2>Frequently Asked <span className="highlight">Questions</span></h2>
-        <p>Everything you need to know about our safety net installations and services in Bengaluru.</p>
+        <p>Everything you need to know about our safety net installations and services in Andhra Pradesh.</p>
       </div>
 
       <div className="faq-container">
@@ -48,8 +48,8 @@ const FAQ = () => {
           >
             <button className="faq-trigger" type="button" aria-expanded={activeIndex === index} onClick={() => toggleFAQ(index)}>
               <div className="faq-question">
-              <h3>{item.question}</h3>
-              <FaChevronDown className="faq-icon" />
+                <h3>{item.question}</h3>
+                <FaChevronDown className="faq-icon" />
               </div>
             </button>
             <div className="faq-answer" aria-hidden={activeIndex !== index}>

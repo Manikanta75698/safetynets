@@ -20,7 +20,7 @@ const Testimonials = () => (
   <section className="testimonials-section" id="net-guide">
     <div className="testimonials-header">
       <h2>Choose the <span className="highlight">Right Net for Your Space</span></h2>
-      <p>Tell us what you need to cover in Bengaluru. We can discuss the available netting and grill options.</p>
+      <p>Tell us what you need to cover in Andhra Pradesh. We can discuss the available netting and grill options.</p>
     </div>
 
     <div className="testimonials-grid">

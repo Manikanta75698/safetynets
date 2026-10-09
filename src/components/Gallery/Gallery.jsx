@@ -20,7 +20,7 @@ const Gallery = () => {
           </div>
           <div className="gallery-info">
             <h3>Stainless Steel Invisible Grills</h3>
-            <p>Elegantly secured without blocking the panoramic skyline view of Bengaluru.</p>
+            <p>Elegantly secured without blocking the panoramic skyline views in Andhra Pradesh.</p>
           </div>
         </div>
 

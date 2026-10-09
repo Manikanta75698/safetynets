@@ -69,7 +69,7 @@ const Hero = () => {
       <div className="hero-container">
         <div key={currentSlide} className="hero-content-animated">
           <div className="hero-badge">
-            <span>Bengaluru Safety Netting</span>
+            <span>Andhra Pradesh Safety Netting</span>
             <span className="badge-divider">•</span>
             <span className="badge-category">{heroSlides[currentSlide].badge}</span>
           </div>
@@ -102,7 +102,7 @@ const Hero = () => {
             </div>
             <div className="trust-item">
               <FaCheckCircle className="trust-icon" />
-              <span>Serving Bengaluru</span>
+              <span>Serving Andhra Pradesh</span>
             </div>
           </div>
         </div>

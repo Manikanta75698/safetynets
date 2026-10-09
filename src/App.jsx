@@ -27,14 +27,28 @@ const localBusinessSchema = {
   email: '@oursafetynets.com',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Bengaluru',
-    addressRegion: 'Karnataka',
+    addressLocality: 'Visakhapatnam',
+    addressRegion: 'Andhra Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: {
-    '@type': 'City',
-    name: 'Bengaluru',
-  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Visakhapatnam',
+    },
+    {
+      '@type': 'City',
+      name: 'Vijayawada',
+    },
+    {
+      '@type': 'City',
+      name: 'Rajahmundry',
+    },
+    {
+      '@type': 'City',
+      name: 'Kakinada',
+    }
+  ],
   knowsAbout: [
     'Balcony safety nets',
     'Pigeon-control netting',
@@ -48,13 +62,13 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Safety Nets &amp; Invisible Grills in Bengaluru | OurSafetyNets</title>
-        <meta name="description" content="Explore balcony safety nets, pigeon-control netting, invisible grills and sports nets in Bengaluru. Call OurSafetyNets to discuss your requirements." />
+        <title>Safety Nets &amp; Invisible Grills in Andhra Pradesh | OurSafetyNets</title>
+        <meta name="description" content="Explore balcony safety nets, pigeon-control netting, invisible grills and sports nets in Andhra Pradesh, including Visakhapatnam, Vijayawada, Rajahmundry, and Kakinada. Call OurSafetyNets to discuss your requirements." />
         <link rel="canonical" href={`${siteUrl}/`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="OurSafetyNets" />
-        <meta property="og:title" content="Safety Nets & Invisible Grills in Bengaluru | OurSafetyNets" />
-        <meta property="og:description" content="Balcony safety nets, pigeon-control netting, invisible grills and sports nets in Bengaluru." />
+        <meta property="og:title" content="Safety Nets & Invisible Grills in Andhra Pradesh | OurSafetyNets" />
+        <meta property="og:description" content="Balcony safety nets, pigeon-control netting, invisible grills and sports nets in Andhra Pradesh (Visakhapatnam, Vijayawada, Rajahmundry, Kakinada)." />
         <meta property="og:url" content={`${siteUrl}/`} />
         <meta property="og:image" content={`${siteUrl}${heroImage}`} />
         <meta name="twitter:card" content="summary" />

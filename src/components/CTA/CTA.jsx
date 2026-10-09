@@ -10,7 +10,7 @@ const CTA = () => {
     <section className="cta-section">
       <div className="cta-content">
         <h2>Protect Your Home & Family Today!</h2>
-        <p>Discuss pigeon netting, balcony safety nets or invisible grills for your Bengaluru property and request a quote.</p>
+        <p>Discuss pigeon netting, balcony safety nets or invisible grills for your Andhra Pradesh property and request a quote.</p>
         <div className="cta-buttons">
           <a href={`tel:+91${phoneNumber}`} className="cta-call-btn">
             <FaPhoneAlt /> Call Now: +91 {phoneNumber}

@@ -79,49 +79,49 @@ const servicesData = [
   {
     id: 9,
     title: "Duct Area Safety Nets",
-    image: net9, // Using net10 for Duct, change if needed
+    image: net9,
     description: "Secure open ventilation shafts and duct areas in apartment buildings. Prevents pigeon intrusion, debris buildup, and accidental falls.",
     features: ["Ventilation-shaft netting", "Pigeon-control options", "Site-specific measurement"]
   },
   {
     id: 10,
     title: "House Covering Safety Nets",
-    image: net10, // Using hero3 for House, change if needed
+    image: net10,
     description: "Complete exterior safety netting solutions for independent houses and villas to protect against monkeys, stray animals, and falling debris.",
     features: ["Exterior netting options", "Custom coverage by property", "Discuss anchoring"]
   },
   {
     id: 11,
     title: "Staircase Safety Nets",
-    image: net11, // Using net11 for Stairs
+    image: net11,
     description: "Protective safety barriers installed along open staircase railings to prevent toddlers and pets from slipping through vertical gaps.",
     features: ["Open-railing coverage", "Options for family homes", "Measure before installation"]
   },
   {
     id: 12,
     title: "Invisible Grill For Windows",
-    image: net12, // Using net12 for Window Grill
+    image: net12,
     description: "Sleek and robust SS 316 invisible grills tailored specifically for windows to ensure uncompromising security and unobstructed airflow.",
     features: ["Stainless-steel cable options", "Window-specific sizing", "Compare finish and spacing"]
   },
   {
     id: 13,
     title: "Mosquito Safety Nets",
-    image: net13, // Using net13 for Mosquito
+    image: net13,
     description: "High-density fine mesh screen nets designed to keep mosquitoes, flies, and unwanted insects out while allowing fresh air circulation.",
     features: ["Fine screen options", "Window-specific sizing", "Compare mesh materials"]
   },
   {
     id: 14,
     title: "Child Safety Nets",
-    image: net14, // Using net14 child safety
+    image: net14,
     description: "Safety net options for balcony edges, stair openings and other spaces where children or pets need an added barrier.",
     features: ["Balcony and stair openings", "Select mesh for the space", "Ask about fixing points"]
   },
   {
     id: 15,
     title: "Staircase Invisible Grills",
-    image: net15, // Using net14 child safety
+    image: net15,
     description: "Staircase invisible-grill options measured for your railing layout and the opening you want to secure.",
     features: ["Staircase cable systems", "Custom measurements", "Discuss cable spacing"]
   }
@@ -135,7 +135,7 @@ const Services = () => {
       <div className="services-header">
         <span className="services-subtitle">Expert Protection Solutions</span>
         <h2>Our Professional <span className="highlight">Safety Services</span></h2>
-        <p>Balcony, pigeon-control, window, sports and construction netting options for homes and projects across Bengaluru.</p>
+        <p>Balcony, pigeon-control, window, sports and construction netting options for homes and projects across Andhra Pradesh, including Visakhapatnam, Vijayawada, Rajahmundry, and Kakinada.</p>
       </div>
 
       <div className="services-grid">

@@ -49,7 +49,7 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-      <header className={`navbar-header ${scrolled ? 'scrolled' : ''} ${isOpen ? 'menu-open' : ''}`}>
+    <header className={`navbar-header ${scrolled ? 'scrolled' : ''} ${isOpen ? 'menu-open' : ''}`}>
       <div className="navbar-container">
         {/* Logo */}
         <a href="#home" className="navbar-logo" onClick={closeMenu}>
@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
           <div className="logo-text">
             <h2>OurSafetyNets</h2>
-            <p>SAFETY • BENGALURU</p>
+            <p>SAFETY • ANDHRA PRADESH</p>
           </div>
         </a>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
               <div className="logo-icon-wrapper"><MdOutlineShield /></div>
               <div className="logo-text">
                 <h2>OurSafetyNets</h2>
-                <p>SAFETY • BENGALURU</p>
+                <p>SAFETY • ANDHRA PRADESH</p>
               </div>
             </a>
             <button className="drawer-close" type="button" onClick={closeMenu} aria-label="Close navigation menu"><FaTimes /></button>

@@ -54,7 +54,7 @@ const SportsGallery = () => {
       <div className="sports-gallery-header">
         <span className="sports-gallery-subtitle">Our Expertise</span>
         <h2>All Types Of <span className="highlight">Sports Nets</span></h2>
-        <p>Premium quality, high-impact sports practice nets for schools, academies, and residential complexes across Bengaluru.</p>
+        <p>Premium quality, high-impact sports practice nets for schools, academies, and residential complexes across Andhra Pradesh.</p>
       </div>
 
       <div className="sports-hero-slider">
