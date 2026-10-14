@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 import { MdOutlineShield } from 'react-icons/md';
 import './Navbar.css';
+import { BUSINESS, TEL_LINK, PHONE_DISPLAY } from '../../config/business';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,8 +58,8 @@ const Navbar = () => {
             <MdOutlineShield />
           </div>
           <div className="logo-text">
-            <h2>OurSafetyNets</h2>
-            <p>SAFETY • ANDHRA PRADESH</p>
+            <span className="logo-name">{BUSINESS.name}</span>
+            <p>SAFETY NETS • {BUSINESS.city.toUpperCase()}</p>
           </div>
         </a>
 
@@ -68,8 +69,8 @@ const Navbar = () => {
             <a href="#home" className="navbar-logo" onClick={closeMenu}>
               <div className="logo-icon-wrapper"><MdOutlineShield /></div>
               <div className="logo-text">
-                <h2>OurSafetyNets</h2>
-                <p>SAFETY • ANDHRA PRADESH</p>
+                <span className="logo-name">{BUSINESS.name}</span>
+                <p>SAFETY NETS • {BUSINESS.city.toUpperCase()}</p>
               </div>
             </a>
             <button className="drawer-close" type="button" onClick={closeMenu} aria-label="Close navigation menu"><FaTimes /></button>
@@ -82,17 +83,17 @@ const Navbar = () => {
 
           {/* Mobile Call Button inside drawer */}
           <div className="mobile-drawer-footer">
-            <a href="tel:+918143267425" className="mobile-call-action" onClick={closeMenu}>
-              <FaPhoneAlt /> Call: +91 81432 67425
+            <a href={TEL_LINK} className="mobile-call-action" onClick={closeMenu}>
+              <FaPhoneAlt /> Call: {PHONE_DISPLAY}
             </a>
           </div>
         </nav>
 
         {/* Header Actions */}
         <div className="navbar-actions">
-          <a href="tel:+918143267425" className="header-call-btn" aria-label="Call Us">
+          <a href={TEL_LINK} className="header-call-btn" aria-label={`Call ${BUSINESS.name}`}>
             <FaPhoneAlt className="phone-icon-pulse" />
-            <span>+91 81432 67425</span>
+            <span>{PHONE_DISPLAY}</span>
           </a>
 
           {/* Hamburger Icon */}

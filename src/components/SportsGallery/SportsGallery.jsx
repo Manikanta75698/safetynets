@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SportsGallery.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { BUSINESS } from '../../config/business';
 
 // Import your actual 10 sports images from assets folder
 import sports1 from '../../assets/sports1.jpg';
@@ -54,7 +55,7 @@ const SportsGallery = () => {
       <div className="sports-gallery-header">
         <span className="sports-gallery-subtitle">Our Expertise</span>
         <h2>All Types Of <span className="highlight">Sports Nets</span></h2>
-        <p>Premium quality, high-impact sports practice nets for schools, academies, and residential complexes across Andhra Pradesh.</p>
+        <p>Premium quality, high-impact cricket and sports practice nets for schools, academies, apartments and residential complexes across {BUSINESS.city}.</p>
       </div>
 
       <div className="sports-hero-slider">
@@ -63,7 +64,7 @@ const SportsGallery = () => {
             className={`sports-slide ${index === currentIndex ? 'active' : ''}`}
             key={index}
           >
-            <img src={slide.url} alt="Sports Nets Installation" />
+            <img src={slide.url} alt={`Sports practice net installation in ${BUSINESS.city} – photo ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
             <div className="sports-slide-content">
               <h3>{commonTitle}</h3>
             </div>
@@ -71,10 +72,10 @@ const SportsGallery = () => {
         ))}
 
         {/* Manual Slide Navigation Buttons */}
-        <button className="slider-btn prev-btn" onClick={handlePrev}>
+        <button className="slider-btn prev-btn" onClick={handlePrev} aria-label="Previous image">
           <FaChevronLeft />
         </button>
-        <button className="slider-btn next-btn" onClick={handleNext}>
+        <button className="slider-btn next-btn" onClick={handleNext} aria-label="Next image">
           <FaChevronRight />
         </button>
 

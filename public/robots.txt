@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oursafetynets.in/sitemap.xml
+Sitemap: https://www.oursafetynets.in/sitemap.xml

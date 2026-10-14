@@ -1,12 +1,11 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import './WhatsApp.css';
+import { BUSINESS, waLink } from '../../config/business';
 
 const WhatsApp = () => {
   // Pre-filled message when user clicks the widget
-  const phoneNumber = "8143267425";
-  const message = "Hi, I am interested in Safety Nets / Invisible Grills. Please provide more details.";
-  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = waLink(`Hi ${BUSINESS.name}, I am interested in safety nets / invisible grills in ${BUSINESS.city}. Please share details.`);
 
   return (
     <a

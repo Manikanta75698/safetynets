@@ -162,3 +162,28 @@
 .footer-designer {
   color: var(--text-secondary);
 }
+
+/* ── Added: service-areas column ────────────────────────────────────────── */
+.areas-col {
+  grid-column: span 1;
+}
+
+.areas-note {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (min-width: 1100px) {
+  .areas-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .areas-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

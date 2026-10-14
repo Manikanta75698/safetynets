@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import { FaShieldAlt, FaChevronLeft, FaChevronRight, FaCheckCircle } from 'react-icons/fa';
+import { BUSINESS } from '../../config/business';
 
 import slide1 from '../../assets/hero1.jpeg';
 import slide2 from '../../assets/hero2.jpeg';
@@ -52,14 +53,16 @@ const Hero = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
+  const slide = heroSlides[currentSlide];
+
   return (
     <section className="hero-section" id="home">
       <div className="hero-slider-bg">
-        {heroSlides.map((slide, index) => (
+        {heroSlides.map((item, index) => (
           <div
             key={index}
             className={`hero-slide-item ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{ backgroundImage: `url(${item.image})` }}
           >
             <div className="hero-overlay"></div>
           </div>
@@ -67,20 +70,23 @@ const Hero = () => {
       </div>
 
       <div className="hero-container">
-        <div key={currentSlide} className="hero-content-animated">
-          <div className="hero-badge">
-            <span>Andhra Pradesh Safety Netting</span>
+        {/* The H1 and CTAs stay static (good for SEO + keyboard focus);
+            only the badge and the slide copy re-animate on each slide. */}
+        <div className="hero-content-animated">
+          <div key={`badge-${currentSlide}`} className="hero-badge hero-rotating">
+            <span>{BUSINESS.city} Safety Netting</span>
             <span className="badge-divider">•</span>
-            <span className="badge-category">{heroSlides[currentSlide].badge}</span>
+            <span className="badge-category">{slide.badge}</span>
           </div>
 
           <h1 className="hero-title">
-            {heroSlides[currentSlide].title}
+            Safety Nets &amp; Invisible Grills <span className="hero-city">in {BUSINESS.city}</span>
           </h1>
 
-          <p className="hero-description">
-            {heroSlides[currentSlide].description}
-          </p>
+          <div key={`copy-${currentSlide}`} className="hero-slide-copy hero-rotating">
+            <h2 className="hero-slide-title">{slide.title}</h2>
+            <p className="hero-description">{slide.description}</p>
+          </div>
 
           <div className="hero-buttons">
             <a href="#contact" className="btn-primary">
@@ -94,15 +100,15 @@ const Hero = () => {
           <div className="hero-trust-row">
             <div className="trust-item">
               <FaCheckCircle className="trust-icon" />
-              <span>Balcony & Window Options</span>
+              <span>Balcony &amp; Window Options</span>
             </div>
             <div className="trust-item">
               <FaShieldAlt className="trust-icon" />
-              <span>Net & Grill Solutions</span>
+              <span>Net &amp; Grill Solutions</span>
             </div>
             <div className="trust-item">
               <FaCheckCircle className="trust-icon" />
-              <span>Serving Andhra Pradesh</span>
+              <span>Serving All Over {BUSINESS.city}</span>
             </div>
           </div>
         </div>

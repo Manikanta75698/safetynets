@@ -1,10 +1,10 @@
 import React from 'react';
 import './Footer.css';
 import { FaShieldAlt, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
+import { BUSINESS, TEL_LINK, PHONE_DISPLAY, ADDRESS_DISPLAY, waLink } from '../../config/business';
 
 const Footer = () => {
-  const phoneNumber = "8143267425";
-  const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent("Hi OurSafetyNets, I need information about safety net installation in AP.")}`;
+  const whatsappUrl = waLink(`Hi ${BUSINESS.name}, I need information about safety net installation in ${BUSINESS.city}.`);
 
   return (
     <footer className="footer-section">
@@ -17,16 +17,16 @@ const Footer = () => {
               <FaShieldAlt />
             </div>
             <div>
-              <h3>OurSafetyNets</h3>
-              <p>ANDHRA PRADESH</p>
+              <h3>{BUSINESS.name}</h3>
+              <p>{BUSINESS.cityOfficial.toUpperCase()}, {BUSINESS.state.toUpperCase()}</p>
             </div>
           </div>
           <p className="footer-about">
-            OurSafetyNets helps AP customers explore safety nets, anti-bird netting and invisible grills. Contact us to discuss your space and request a quote.
+            {BUSINESS.name} installs balcony safety nets, pigeon nets, invisible grills and sports nets for homes, apartments and projects across {BUSINESS.city} ({BUSINESS.cityOfficial}). Contact us to discuss your space and request a quote.
           </p>
           <div className="footer-contact-info">
-            <p><FaMapMarkerAlt className="f-icon" /> Serving All Over AP</p>
-            <p><FaPhoneAlt className="f-icon" /> <a href={`tel:+91${phoneNumber}`}>+91 {phoneNumber}</a></p>
+            <p><FaMapMarkerAlt className="f-icon" /> {ADDRESS_DISPLAY}</p>
+            <p><FaPhoneAlt className="f-icon" /> <a href={TEL_LINK}>{PHONE_DISPLAY}</a></p>
             <p><FaWhatsapp className="f-icon" /> <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
           </div>
         </div>
@@ -56,27 +56,23 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 4: AP Service Areas */}
-        <div className="footer-col">
-          <h4>Service Areas in AP</h4>
-          <ul className="footer-links-list areas-list">
-            <li><a href="#contact">Visakhapatnam</a></li>
-            <li><a href="#contact">Vijayawada</a></li>
-            <li><a href="#contact">Rajahmundry</a></li>
-            <li><a href="#contact">Kakinada</a></li>
-            <li><a href="#contact">Guntur</a></li>
-            <li><a href="#contact">Tirupati</a></li>
-            <li><a href="#contact">Nellore</a></li>
-            <li><a href="#contact">Kurnool</a></li>
+        {/* Column 4: Service areas (list lives in src/config/business.js) */}
+        <div className="footer-col areas-col">
+          <h4>Service Areas in {BUSINESS.city}</h4>
+          <ul className="footer-links-list areas-list" aria-label={`Localities we serve in ${BUSINESS.city}`}>
+            {BUSINESS.areas.map((area) => (
+              <li key={area}><a href="#contact">{area}</a></li>
+            ))}
           </ul>
+          <p className="areas-note">…and all other localities across {BUSINESS.cityOfficial}.</p>
         </div>
 
       </div>
 
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; {new Date().getFullYear()} OurSafetyNets AP. All Rights Reserved.</p>
-          <p className="footer-designer">Safety nets and invisible grills in AP</p>
+          <p>&copy; {new Date().getFullYear()} {BUSINESS.name} {BUSINESS.city}. All Rights Reserved.</p>
+          <p className="footer-designer">Safety nets and invisible grills in {BUSINESS.city}, {BUSINESS.state}</p>
         </div>
       </div>
     </footer>

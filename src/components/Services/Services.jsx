@@ -1,6 +1,7 @@
 import React from 'react';
 import './Services.css';
 import { FaCheckCircle, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+import { BUSINESS, TEL_LINK, waLink, listAreas } from '../../config/business';
 
 // Import all real installation images cleanly from assets (Flow: net1, net2... net8)
 import net1 from '../../assets/net1.jpg'; // ID: 1
@@ -128,24 +129,22 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const phoneNumber = "8143267425";
-
   return (
     <section className="services-section" id="services">
       <div className="services-header">
         <span className="services-subtitle">Expert Protection Solutions</span>
         <h2>Our Professional <span className="highlight">Safety Services</span></h2>
-        <p>Balcony, pigeon-control, window, sports and construction netting options for homes and projects across Andhra Pradesh, including Visakhapatnam, Vijayawada, Rajahmundry, and Kakinada.</p>
+        <p>Balcony, pigeon-control, window, sports and construction netting for homes, apartments and projects across {BUSINESS.city} — including {listAreas()} — with site measurement and professional installation.</p>
       </div>
 
       <div className="services-grid">
         {servicesData.map((service) => {
-          const whatsappUrl = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(`Hi OurSafetyNets, I am interested in getting ${service.title} installed. Please share details.`)}`;
+          const whatsappUrl = waLink(`Hi ${BUSINESS.name}, I am interested in getting ${service.title} installed in ${BUSINESS.city}. Please share details.`);
 
           return (
             <div className="service-card" key={service.id}>
               <div className="service-img-wrapper">
-                <img src={service.image} alt={service.title} loading="lazy" />
+                <img src={service.image} alt={`${service.title} installation in ${BUSINESS.city}`} loading="lazy" />
                 <div className="service-badge-tag">Installation Options</div>
               </div>
 
@@ -162,7 +161,7 @@ const Services = () => {
                 </ul>
 
                 <div className="service-actions">
-                  <a href={`tel:+91${phoneNumber}`} className="service-call-btn">
+                  <a href={TEL_LINK} className="service-call-btn">
                     <FaPhoneAlt /> Call Now
                   </a>
                   <a href={whatsappUrl} className="service-wa-btn" target="_blank" rel="noopener noreferrer">

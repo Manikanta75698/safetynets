@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './FAQ.css';
 import { FaChevronDown } from 'react-icons/fa';
+import { BUSINESS, listAreas } from '../../config/business';
 
 const faqData = [
   {
@@ -20,8 +21,12 @@ const faqData = [
     answer: "Timing depends on the size, access and fixing points of the area. Share photos or request a site measurement for an estimate."
   },
   {
-    question: "Do you offer free inspection across Andhra Pradesh?",
-    answer: "Inspection availability may depend on your location and project. Contact us with your area and requirements to confirm whether a site visit is available."
+    question: `Which areas of ${BUSINESS.city} do you cover?`,
+    answer: `We install safety nets and invisible grills across ${BUSINESS.city}, including ${listAreas(BUSINESS.areas.slice(0, 12))} and surrounding localities. Share your location on WhatsApp and we will confirm a site visit.`
+  },
+  {
+    question: `Do you offer free inspection in ${BUSINESS.city}?`,
+    answer: `Site visits are available across ${BUSINESS.city} depending on your location and project size. Contact us with your area and requirements to confirm a convenient time.`
   }
 ];
 
@@ -37,7 +42,7 @@ const FAQ = () => {
       <div className="faq-header">
         <span className="faq-subtitle">Got Questions?</span>
         <h2>Frequently Asked <span className="highlight">Questions</span></h2>
-        <p>Everything you need to know about our safety net installations and services in Andhra Pradesh.</p>
+        <p>Everything you need to know about our safety net and invisible grill installations in {BUSINESS.city}.</p>
       </div>
 
       <div className="faq-container">

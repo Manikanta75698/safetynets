@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaWhatsapp } from 'react-icons/fa';
+import { BUSINESS, TEL_LINK, PHONE_DISPLAY, ADDRESS_DISPLAY, waLink } from '../../config/business';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,7 +9,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-header">
           <h2>Get In <span className="highlight">Touch</span></h2>
-          <p>Have a question or need a free quotation? Fill out the form, or reach out to us directly.</p>
+          <p>Need a free quotation for safety nets or invisible grills anywhere in {BUSINESS.city}? Fill out the form, or reach out to us directly.</p>
         </div>
 
         <div className="contact-grid">
@@ -20,19 +21,31 @@ const Contact = () => {
               </div>
               <div className="info-details">
                 <h4>Call Us</h4>
-                <a href="tel:+918143267425">+91 81432 67425</a>
+                <a href={TEL_LINK}>{PHONE_DISPLAY}</a>
               </div>
             </div>
 
             <div className="info-card-item">
               <div className="icon-box">
-                <FaEnvelope />
+                <FaWhatsapp />
               </div>
               <div className="info-details">
-                <h4>Email Us</h4>
-                <a href="mailto:@oursafetynets.com">@oursafetynets.com</a>
+                <h4>WhatsApp</h4>
+                <a href={waLink()} target="_blank" rel="noopener noreferrer">Chat with us for a quick quote</a>
               </div>
             </div>
+
+            {BUSINESS.email && (
+              <div className="info-card-item">
+                <div className="icon-box">
+                  <FaEnvelope />
+                </div>
+                <div className="info-details">
+                  <h4>Email Us</h4>
+                  <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
+                </div>
+              </div>
+            )}
 
             <div className="info-card-item">
               <div className="icon-box">
@@ -40,7 +53,8 @@ const Contact = () => {
               </div>
               <div className="info-details">
                 <h4>Location</h4>
-                <p> Bangalore - 560054</p>
+                <p>{ADDRESS_DISPLAY}</p>
+                <p>Serving all areas of {BUSINESS.city}</p>
               </div>
             </div>
           </div>
